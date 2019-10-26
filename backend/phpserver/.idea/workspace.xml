@@ -121,19 +121,20 @@
   <component name="PropertiesComponent">
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$/public" />
-    <property name="settings.editor.selected.configurable" value="liveEdit" />
+    <property name="nodejs_package_manager_path" value="npm" />
+    <property name="settings.editor.selected.configurable" value="reference.webide.settings.project.settings.php" />
   </component>
   <component name="RecentsManager">
-    <key name="CopyFile.RECENT_KEYS">
-      <recent name="E:\ProgramData\webprog\Laravel\Studtest\public" />
-      <recent name="E:\ProgramData\webprog\Laravel\Studtest\resources\views" />
-    </key>
     <key name="MoveFile.RECENT_KEYS">
+      <recent name="E:\ProgramData\webprog\Laravel\Studtest\public\studtest\assets\html" />
       <recent name="E:\ProgramData\webprog\Laravel\Studtest\app\Http\Controllers\Studtest\Auth" />
       <recent name="E:\ProgramData\webprog\Laravel\Studtest\app\Http\Controllers\Studtest" />
       <recent name="E:\ProgramData\webprog\Laravel\Studtest\app\Http\Studtest\Controllers" />
       <recent name="E:\ProgramData\webprog\Laravel\Studtest\app\Http\Controllers\Example" />
-      <recent name="E:\ProgramData\webprog\Laravel\Studtest\public\studtest\assets\css" />
+    </key>
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="E:\ProgramData\webprog\Laravel\Studtest\public" />
+      <recent name="E:\ProgramData\webprog\Laravel\Studtest\resources\views" />
     </key>
   </component>
   <component name="RunDashboard">
@@ -175,6 +176,10 @@
       <workItem from="1571958368072" duration="1131000" />
       <workItem from="1572005618873" duration="10709000" />
       <workItem from="1572027222552" duration="2915000" />
+      <workItem from="1572030489082" duration="8000" />
+      <workItem from="1572031154997" duration="372000" />
+      <workItem from="1572031772942" duration="6095000" />
+      <workItem from="1572100330605" duration="14953000" />
     </task>
     <servers />
   </component>
