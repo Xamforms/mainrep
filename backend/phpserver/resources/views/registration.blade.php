@@ -20,23 +20,45 @@
             <div class="preview-picture"> </div>
         </div>
         <div class="right-block block">
+            @if ($errors)
+            <ul>
+                @foreach($errors->all() as $error)
+                    <li>{{$error}}</li>
+                @endforeach
+            </ul>
+            @endif
             <div class="form-registration">
-                <form method="post" action="studtest/assets/php/form-registration.php">
+                <form method="post" action="/registration/newuser"> <!--studtest/assets/php/form-registration.php-->
                     @csrf  <!--Токен сессии для отправки на сервер (см сsrf-атака)-->
                     <div class="form-input">
                         <label for="email">E-mail<span class="mark">*</span></label>
-                        <input type="email" name="email" placeholder="ivanov@mymail.ru" required=""> </div>
+                        @error ('email')
+                        <div>{{$message}}</div>
+                        @enderror
+                        <input type="email" name="email" placeholder="ivanov@mymail.ru"> </div>
                     <div class="form-input">
                         <label for="lastname">Фамилия<span class="mark">*</span></label>
-                        <input type="text" name="lastname" placeholder="Иванов" required=""> </div>
+                        @error ('lastname')
+                        <div>{{$message}}</div>
+                        @enderror
+                        <input type="text" name="lastname" placeholder="Иванов"> </div>
                     <div class="form-input">
                         <label for="firstname">Имя<span class="mark">*</span></label>
-                        <input type="text" name="patronymic" placeholder="Иван" required=""> </div>
+                        @error ('firstname')
+                        <div>{{$message}}</div>
+                        @enderror
+                        <input type="text" name="firstname" placeholder="Иван"> </div>
                     <div class="form-input">
                         <label for="name">Отчество</label>
-                        <input type="text" name="patronymic" placeholder="Иванович" required=""> </div>
+                        @error ('patronymic')
+                        <div>{{$message}}</div>
+                        @enderror
+                        <input type="text" name="patronymic" placeholder="Иванович"> </div>
                     <div class="radio form-input">
                         <div class="radio-label">Кто вы?<span class="mark">*</span></div>
+                        @error ('standing')
+                        <div>{{$message}}</div>
+                        @enderror
                         <label>
                             <input type="radio" name="standing" value="преподаватель">Преподаватель</label>
                         <label>
@@ -44,17 +66,26 @@
                     </div>
                     <div class="form-input">
                         <label for="password">Придумайте пароль<span class="mark">*</span></label>
-                        <input type="password" name="password" placeholder="не менее 8 символов" required=""> </div>
+                        @error ('password')
+                        <div>{{$message}}</div>
+                        @enderror
+                        <input type="password" name="password" placeholder="не менее 8 символов"> </div>
                     <div class="form-input">
                         <label for="repeatpassword">Повторите пароль<span class="mark">*</span></label>
-                        <input type="password" name="repeatpassword" required="">
+                        @error ('repeatpassword')
+                        <div>{{$message}}</div>
+                        @enderror
+                        <input type="password" name="repeatpassword">
                         <p class="text-form">Поля, помеченные символом "<span class="mark">*</span>", обязательны к заполнению</p>
                     </div>
                     <div class="form-input">
                         <button type="submit" class="button-registration">Зарегистрироваться</button>
                         <p class="agreement">
                             <label for="terms">
-                                <input type="checkbox" name="terms" value="yes">Я даю согласие на <a href="">обработку персональных данных</a> </label>
+                                @error ('terms')
+                                <div>{{$message}}</div>
+                                @enderror
+                                <input type="checkbox" name="terms" value="yes"><span class="mark">*</span></label> Я даю согласие на <a href="">обработку персональных данных</a> </label>
                         </p>
                     </div>
                 </form>

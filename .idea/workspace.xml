@@ -100,6 +100,8 @@
       <workItem from="1572030500728" duration="648000" />
       <workItem from="1572031529858" duration="235000" />
       <workItem from="1572032135877" duration="1041000" />
+      <workItem from="1572122619706" duration="257000" />
+      <workItem from="1572154346806" duration="7000" />
     </task>
     <task id="LOCAL-00001" summary="Тестовое подключение к локалхосту">
       <created>1570035373394</created>
@@ -150,7 +152,14 @@
       <option name="project" value="LOCAL" />
       <updated>1572030943228</updated>
     </task>
-    <option name="localTasksCounter" value="8" />
+    <task id="LOCAL-00008" summary="Идёт работа над обработкой и валидацией данных формы, создан контроллер для принятия данных регистрации, добавлен blade-шаблон страницы">
+      <created>1572122848673</created>
+      <option name="number" value="00008" />
+      <option name="presentableId" value="LOCAL-00008" />
+      <option name="project" value="LOCAL" />
+      <updated>1572122848673</updated>
+    </task>
+    <option name="localTasksCounter" value="9" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -218,7 +227,8 @@
     <MESSAGE value="Неизвестная ошибка класса Application\Foundation Laravel, но создан проект по-умолчанию, какая-то ошибка PHPstorm. Потерян доступ к проекту с сервера, поэтому пока не могу исправить." />
     <MESSAGE value="Добавлена страница в директорию public/studtest и первый router" />
     <MESSAGE value="реструктуризация" />
-    <option name="LAST_COMMIT_MESSAGE" value="реструктуризация" />
+    <MESSAGE value="Идёт работа над обработкой и валидацией данных формы, создан контроллер для принятия данных регистрации, добавлен blade-шаблон страницы" />
+    <option name="LAST_COMMIT_MESSAGE" value="Идёт работа над обработкой и валидацией данных формы, создан контроллер для принятия данных регистрации, добавлен blade-шаблон страницы" />
   </component>
   <component name="antWorkspaceConfiguration">
     <option name="IS_AUTOSCROLL_TO_SOURCE" value="false" />

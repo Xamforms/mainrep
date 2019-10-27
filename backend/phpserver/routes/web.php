@@ -15,14 +15,13 @@ Route::get('/', function () {
     return view('welcome');
 });
 
-Route::get('/registration/{rendertype}', function ($rendertype) {
+Route::get('/registration/render/{rendertype}', function ($rendertype) {
     if ($rendertype = 'html')
         return File::get(public_path() . "/studtest/assets/html/registration.html"); //Без шаблонов
     elseif ($rendertype = 'blade')
         return view('registration'); //С шаблонами (html, php в одном файле и с подстановками)
 });
 
+Route::get('/registration', '\App\Http\Controllers\Studtest\Auth\RegisterController@showpage');
 
-Route::get('registration', '\App\Http\Controllers\Studtest\Auth\RegisterController@showpage');
-
-Route::post('../studtest/assets/php/form-registration.php', '\App\Http\Controllers\Studtest\Auth\RegisterController@storeuserdata');
+Route::post('/registration/newuser', '\App\Http\Controllers\Studtest\Auth\RegisterController@submitform');
