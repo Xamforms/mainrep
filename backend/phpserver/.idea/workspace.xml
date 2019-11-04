@@ -14,9 +14,14 @@
       <phar pharPath="C:\ProgramData\ComposerSetup\bin\composer.phar" interpreterId="36a3b65d-b9d2-4423-8b26-6021f19cc173" />
     </execution>
   </component>
+  <component name="FavoritesManager">
+    <favorites_list name="Studtest" />
+  </component>
+  <component name="PhpDebugGeneral" listening_started="true" />
   <component name="PhpServers">
     <servers>
       <server host="127.0.0.1" id="97549828-8a55-4bad-84d6-7ccfcb4d0ab7" name="127.0.0.1" port="8000" />
+      <server deployment_server="da713343-d063-44c9-b116-9df11c9ac587" host="localhost" id="7e0faa0c-9c16-42a9-b4cf-e2c96b04aa21" name="Studtestserver" port="8080" />
     </servers>
   </component>
   <component name="PhpWorkspaceProjectConfiguration" interpreter_name="PHP">
@@ -125,15 +130,21 @@
   <component name="ProjectId" id="1SRL8HhAaMeTEaiJmE4G33dVQB3" />
   <component name="PropertiesComponent">
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/public" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/server.php" />
+    <property name="node.js.detected.package.eslint" value="true" />
+    <property name="node.js.detected.package.standard" value="true" />
+    <property name="node.js.path.for.package.eslint" value="project" />
+    <property name="node.js.path.for.package.standard" value="project" />
+    <property name="node.js.selected.package.eslint" value="(autodetect)" />
+    <property name="node.js.selected.package.standard" value="" />
     <property name="nodejs_package_manager_path" value="npm" />
-    <property name="settings.editor.selected.configurable" value="reference.webide.settings.project.settings.php.debug" />
+    <property name="settings.editor.selected.configurable" value="web-ide.project.structure" />
   </component>
   <component name="RecentsManager">
     <key name="MoveFile.RECENT_KEYS">
+      <recent name="E:\ProgramData\webprog\Laravel\Studtest\app\Http\Controllers\Studtest" />
       <recent name="E:\ProgramData\webprog\Laravel\Studtest\public\studtest\assets\html" />
       <recent name="E:\ProgramData\webprog\Laravel\Studtest\app\Http\Controllers\Studtest\Auth" />
-      <recent name="E:\ProgramData\webprog\Laravel\Studtest\app\Http\Controllers\Studtest" />
       <recent name="E:\ProgramData\webprog\Laravel\Studtest\app\Http\Studtest\Controllers" />
       <recent name="E:\ProgramData\webprog\Laravel\Studtest\app\Http\Controllers\Example" />
     </key>
@@ -154,11 +165,25 @@
       </list>
     </option>
   </component>
-  <component name="RunManager">
+  <component name="RunManager" selected="PHP Built-in Web Server.Debugserver">
     <configuration name="phpunit.xml" type="PHPUnitRunConfigurationType" factoryName="PHPUnit">
       <TestRunner scope="XML" />
       <method v="2" />
     </configuration>
+    <configuration name="Debugserver" type="PhpBuiltInWebServerConfigurationType" factoryName="PHP Built-in Web Server" document_root="$PROJECT_DIR$/public/studtest/" port="8080" router_script="$PROJECT_DIR$/server.php" use_router_script="true">
+      <CommandLine parameters="-dxdebug.remote_enable=1 -dxdebug.remote_autostart = 1 -dxdebug.remote_mode=req -dxdebug.remote_port=9000 -dxdebug.remote_host=127.0.0.1" />
+      <method v="2">
+        <option name="LaunchBrowser.Before.Run" browser="a7bb68e0-33c0-4d6f-a81a-aac1fdb870c8" url="localhost:8080/registration" />
+      </method>
+    </configuration>
+    <configuration default="true" type="PhpBuiltInWebServerConfigurationType" factoryName="PHP Built-in Web Server" document_root="$PROJECT_DIR$" port="8080" router_script="$PROJECT_DIR$/server.php" use_router_script="true">
+      <CommandLine parameters="-dxdebug.remote_enable=1 -dxdebug.remote_mode=req -dxdebug.remote_port=9000 -dxdebug.remote_host=127.0.0.1" />
+      <method v="2" />
+    </configuration>
+    <list>
+      <item itemvalue="PHP Built-in Web Server.Debugserver" />
+      <item itemvalue="PHPUnit.phpunit.xml" />
+    </list>
   </component>
   <component name="SvnConfiguration">
     <configuration />
@@ -188,10 +213,17 @@
       <workItem from="1572122588998" duration="27000" />
       <workItem from="1572154360113" duration="11595000" />
       <workItem from="1572182476354" duration="2069000" />
+      <workItem from="1572184667151" duration="189000" />
+      <workItem from="1572808009500" duration="10040000" />
+      <workItem from="1572820147207" duration="3250000" />
+      <workItem from="1572853586317" duration="11259000" />
     </task>
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="1" />
+  </component>
+  <component name="com.intellij.coverage.CoverageDataManagerImpl">
+    <SUITE FILE_PATH="coverage/Studtest@phpunit_xml.xml" NAME="phpunit.xml Coverage Results" MODIFIED="1572816101752" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="PhpCoverage" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" />
   </component>
 </project>

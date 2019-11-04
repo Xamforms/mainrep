@@ -2,7 +2,7 @@
 <html lang="en"><head>
     <meta http-equiv="content-type" content="text/html; charset=UTF-8">
     <meta charset="UTF-8">
-    <link rel="stylesheet" href="studtest/assets/css/style.css">
+    <link rel="stylesheet" href="/studtest/assets/css/style.css">
     <title>Document</title>
 </head>
 
@@ -16,7 +16,7 @@
     <div class="content-body container">
         <div class="left-block block">
             <div class="logo-inscription">
-                <h2> <img alt="" class="logo" src="studtest/assets/images/logo.png"><br>Создавай и решай тесты он-лайн вместе со СтудТест</h2> </div>
+                <h2> <img alt="" class="logo" src="/studtest/assets/images/logo.png"><br>Создавай и решай тесты он-лайн вместе со СтудТест</h2> </div>
             <div class="preview-picture"> </div>
         </div>
         <div class="right-block block">
@@ -71,11 +71,11 @@
                         @enderror
                         <input type="password" name="password" placeholder="не менее 8 символов"> </div>
                     <div class="form-input">
-                        <label for="repeatpassword">Повторите пароль<span class="mark">*</span></label>
-                        @error ('repeatpassword')
+                        <label for="password_confirmation">Повторите пароль<span class="mark">*</span></label>
+                        @error ('password_confirmation')
                         <div>{{$message}}</div>
                         @enderror
-                        <input type="password" name="repeatpassword">
+                        <input type="password" name="password_confirmation">
                         <p class="text-form">Поля, помеченные символом "<span class="mark">*</span>", обязательны к заполнению</p>
                     </div>
                     <div class="form-input">
