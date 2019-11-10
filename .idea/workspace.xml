@@ -3,6 +3,8 @@
   <component name="ChangeListManager">
     <list default="true" id="0bb64434-99e9-410e-86c7-e41418c63100" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/backend/phpserver/app/Http/Controllers/Studtest/Auth/RegisterController.php" beforeDir="false" afterPath="$PROJECT_DIR$/backend/phpserver/app/Http/Controllers/Studtest/Auth/RegisterController.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/backend/phpserver/resources/views/registration.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/backend/phpserver/resources/views/registration.blade.php" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -106,6 +108,8 @@
       <workItem from="1572185726731" duration="528000" />
       <workItem from="1572187044331" duration="1462000" />
       <workItem from="1572561005377" duration="34000" />
+      <workItem from="1572867894880" duration="886000" />
+      <workItem from="1573396225663" duration="5367000" />
     </task>
     <task id="LOCAL-00001" summary="Тестовое подключение к локалхосту">
       <created>1570035373394</created>
@@ -170,7 +174,14 @@
       <option name="project" value="LOCAL" />
       <updated>1572184938920</updated>
     </task>
-    <option name="localTasksCounter" value="10" />
+    <task id="LOCAL-00010" summary="Исправлена валидация, добавлена отправка JSON через GuzzleHttp в существующем контроллере (без сессии), вывод запроса и ответа в дебаг-режиме">
+      <created>1572868174902</created>
+      <option name="number" value="00010" />
+      <option name="presentableId" value="LOCAL-00010" />
+      <option name="project" value="LOCAL" />
+      <updated>1572868174902</updated>
+    </task>
+    <option name="localTasksCounter" value="11" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -240,7 +251,9 @@
     <MESSAGE value="реструктуризация" />
     <MESSAGE value="Идёт работа над обработкой и валидацией данных формы, создан контроллер для принятия данных регистрации, добавлен blade-шаблон страницы" />
     <MESSAGE value="Добавлена валидация и первичный вывод ошибок полей в форме, отправку на javaserver не успеваю" />
-    <option name="LAST_COMMIT_MESSAGE" value="Добавлена валидация и первичный вывод ошибок полей в форме, отправку на javaserver не успеваю" />
+    <MESSAGE value="Исправлена валидация, добавлена отправка JSON через GuzzleHttp, вывод запроса и ответа в дебаг-режиме" />
+    <MESSAGE value="Исправлена валидация, добавлена отправка JSON через GuzzleHttp в существующем контроллере (без сессии), вывод запроса и ответа в дебаг-режиме" />
+    <option name="LAST_COMMIT_MESSAGE" value="Исправлена валидация, добавлена отправка JSON через GuzzleHttp в существующем контроллере (без сессии), вывод запроса и ответа в дебаг-режиме" />
   </component>
   <component name="antWorkspaceConfiguration">
     <option name="IS_AUTOSCROLL_TO_SOURCE" value="false" />

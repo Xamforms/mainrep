@@ -19,15 +19,16 @@ class RegisterController extends Controller
     function submitform (Request $request)
     {
         $validatedData = $this->validate($request,[
-           'email'=>'bail|required|email',
-           'lastname'=>'bail|required|alpha',
-           'firstname'=>'bail|required|alpha',
-           'patronymic'=>'bail|nullable|alpha',
-           'standing'=>'bail|required',
-           'password'=>'bail|required|alpha_num|between:8,20|confirmed',
-           'password_confirmation'=>'bail|required|alpha_num|between:8,20',
-           'terms'=>'accepted'
-           ]);
+            'email'=>'bail|required|email',
+            'surname'=>'bail|required|alpha',
+            'name'=>'bail|required|alpha',
+            'patronymic'=>'bail|nullable|alpha',
+            'role'=>'bail|required|in:student,teacher',
+            'password'=>'bail|required|alpha_num|between:8,20|confirmed',
+            'password_confirmation'=>'bail|required|alpha_num|between:8,20',
+            'terms'=>'bail|accepted'
+        ]);
+        unset($validatedData['password_confirmation'], $validatedData['terms']);
         $this->sendData($validatedData);
     }
 

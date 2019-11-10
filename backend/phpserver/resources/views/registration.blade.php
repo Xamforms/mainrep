@@ -21,15 +21,15 @@
         </div>
         <div class="right-block block">
             @if ($errors)
-            <ul>
-                @foreach($errors->all() as $error)
-                    <li>{{$error}}</li>
-                @endforeach
-            </ul>
+                <ul>
+                    @foreach($errors->all() as $error)
+                        <li>{{$error}}</li>
+                    @endforeach
+                </ul>
             @endif
             <div class="form-registration">
                 <form method="post" action="/registration/newuser"> <!--studtest/assets/php/form-registration.php-->
-                    @csrf  <!--Токен сессии для отправки на сервер (см сsrf-атака)-->
+                @csrf  <!--Токен сессии для отправки на сервер (см сsrf-атака)-->
                     <div class="form-input">
                         <label for="email">E-mail<span class="mark">*</span></label>
                         @error ('email')
@@ -37,17 +37,17 @@
                         @enderror
                         <input type="email" name="email" placeholder="ivanov@mymail.ru"> </div>
                     <div class="form-input">
-                        <label for="lastname">Фамилия<span class="mark">*</span></label>
-                        @error ('lastname')
+                        <label for="surname">Фамилия<span class="mark">*</span></label>
+                        @error ('surname')
                         <div>{{$message}}</div>
                         @enderror
-                        <input type="text" name="lastname" placeholder="Иванов"> </div>
+                        <input type="text" name="surname" placeholder="Иванов"> </div>
                     <div class="form-input">
-                        <label for="firstname">Имя<span class="mark">*</span></label>
-                        @error ('firstname')
+                        <label for="name">Имя<span class="mark">*</span></label>
+                        @error ('name')
                         <div>{{$message}}</div>
                         @enderror
-                        <input type="text" name="firstname" placeholder="Иван"> </div>
+                        <input type="text" name="name" placeholder="Иван"> </div>
                     <div class="form-input">
                         <label for="name">Отчество</label>
                         @error ('patronymic')
@@ -56,13 +56,13 @@
                         <input type="text" name="patronymic" placeholder="Иванович"> </div>
                     <div class="radio form-input">
                         <div class="radio-label">Кто вы?<span class="mark">*</span></div>
-                        @error ('standing')
+                        @error ('role')
                         <div>{{$message}}</div>
                         @enderror
                         <label>
-                            <input type="radio" name="standing" value="преподаватель">Преподаватель</label>
+                            <input type="radio" name="role" value="student">Преподаватель</label>
                         <label>
-                            <input type="radio" name="standing" value="студент">Студент </label>
+                            <input type="radio" name="role" value="teacher">Студент </label>
                     </div>
                     <div class="form-input">
                         <label for="password">Придумайте пароль<span class="mark">*</span></label>
