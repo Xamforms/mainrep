@@ -11,12 +11,12 @@ use GuzzleHttp\Middleware;
 
 class RegisterController extends Controller
 {
-    function showpage (Request $request)
+    function showregform ()
     {
             return view("registration");
     }
 
-    function submitform (Request $request)
+    function submitregform (Request $request)
     {
         $validatedData = $this->validate($request,[
             'email'=>'bail|required|email',
@@ -29,31 +29,42 @@ class RegisterController extends Controller
             'terms'=>'bail|accepted'
         ]);
         unset($validatedData['password_confirmation'], $validatedData['terms']);
-        $this->sendData($validatedData);
+        return $this->sendData($validatedData);
     }
 
     function sendData(array $validatedData)
     {
         $client = new Client([
-            'base_uri' => 'http://httpbin.org',
+            'base_uri' => 'localhost:8081',
             'headers' => ['Content-Type' => 'application/json'],
-            'debug'=>fopen($_SERVER['DOCUMENT_ROOT']."/request.log", "a")
+            /*'debug'=>fopen($_SERVER['DOCUMENT_ROOT']."/request.log", "a")*/
         ]);
-        $request = new Psr7\Request('POST', '/post',
+        $request = new Psr7\Request('POST', '/check',
             ['body' => json_encode($validatedData)]);
         try {
             $response = $client->send($request);
-            echo "Лог запроса:<br><br>";
-            echo file_get_contents($_SERVER['DOCUMENT_ROOT']."/request.log");
+            /*echo "Лог запроса:<br><br>";
+            echo file_get_contents($_SERVER['DOCUMENT_ROOT']."/request.log");*/
             echo "<br><br>Ответ:<br><br>";
             echo $response->getBody()."<br>";
             echo "Код ответа:<br>";
-            echo $response->getStatusCode()."<br>";
-        } catch (Exception\GuzzleException $e) {
-            echo $e->getRequest();
-            if ($e->hasResponse()) {
-                echo $e->getResponse();
+            echo $response->getStatusCode() . "<br>";
+            echo $response->getBody()->getContents();
+            if ($response->getReasonPhrase() == "OK") {
+                return redirect()->route('HomeRoute');
             }
+            else if ($response->getReasonPhrase() == "User already exists")
+            {
+                return back()->withInput();
+            }
+        } catch (Exception\GuzzleException $e) {
+            echo file_get_contents($_SERVER['DOCUMENT_ROOT'] . "/request.log");
+            /*if ($e->hasResponse()) {
+                echo $e->getResponse();
+            }*/
+            echo $e->getMessage();
+            echo $e->getPrevious();
+            echo $e->getCode();
         }
     }
 }

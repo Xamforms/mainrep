@@ -22,7 +22,11 @@ Route::get('/registration/render/{rendertype}', function ($rendertype) {
         return view('registration'); //С шаблонами (html, php в одном файле и с подстановками)
 });
 
-Route::get('/registration', 'Studtest\Auth\RegisterController@showpage');
+Route::get('/home', 'Studtest\HomeController@showhome')->name('HomeRoute');
 
-Route::post('/registration/newuser', 'Studtest\Auth\RegisterController@submitform');
+Route::get('/lk', 'Studtest\LKController@showlk');
+
+Route::get('/registration', 'Studtest\Auth\RegisterController@showregform');
+
+Route::post('/registration/newuser', 'Studtest\Auth\RegisterController@submitregform');
 

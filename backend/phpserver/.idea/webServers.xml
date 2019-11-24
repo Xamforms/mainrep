@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="WebServers">
+    <option name="servers">
+      <webServer id="46131cbb-a3c0-464a-bc13-b1f6f2c24f65" name="localhost" url="http://localhost:8080/registration">
+        <fileTransfer port="0" mountedRoot="E:\ProgramData\webprog\Laravel\Studtest" accessType="MOUNT" />
+      </webServer>
+    </option>
+  </component>
+</project>
