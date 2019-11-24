@@ -143,16 +143,16 @@
     <property name="settings.editor.selected.configurable" value="reference.webide.settings.project.settings.php.debug" />
   </component>
   <component name="RecentsManager">
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="E:\ProgramData\webprog\Laravel\Studtest\app\Http\Controllers\Studtest\Auth" />
+      <recent name="E:\ProgramData\webprog\Laravel\Studtest\app\Http\Controllers\Studtest" />
+      <recent name="E:\ProgramData\webprog\Laravel\Studtest\public\studtest\assets\html" />
+      <recent name="E:\ProgramData\webprog\Laravel\Studtest\app\Http\Studtest\Controllers" />
+      <recent name="E:\ProgramData\webprog\Laravel\Studtest\app\Http\Controllers\Example" />
+    </key>
     <key name="CopyFile.RECENT_KEYS">
       <recent name="E:\ProgramData\webprog\Laravel\Studtest\public" />
       <recent name="E:\ProgramData\webprog\Laravel\Studtest\resources\views" />
-    </key>
-    <key name="MoveFile.RECENT_KEYS">
-      <recent name="E:\ProgramData\webprog\Laravel\Studtest\app\Http\Controllers\Studtest" />
-      <recent name="E:\ProgramData\webprog\Laravel\Studtest\public\studtest\assets\html" />
-      <recent name="E:\ProgramData\webprog\Laravel\Studtest\app\Http\Controllers\Studtest\Auth" />
-      <recent name="E:\ProgramData\webprog\Laravel\Studtest\app\Http\Studtest\Controllers" />
-      <recent name="E:\ProgramData\webprog\Laravel\Studtest\app\Http\Controllers\Example" />
     </key>
   </component>
   <component name="RunDashboard">
@@ -237,23 +237,12 @@
       <workItem from="1573589887296" duration="287000" />
       <workItem from="1574586278438" duration="18548000" />
       <workItem from="1574613159541" duration="13328000" />
-      <workItem from="1574629387032" duration="1118000" />
+      <workItem from="1574629387032" duration="6580000" />
     </task>
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="1" />
-  </component>
-  <component name="XDebuggerManager">
-    <breakpoint-manager>
-      <breakpoints>
-        <line-breakpoint enabled="true" type="php">
-          <url>file://$PROJECT_DIR$/app/Http/Controllers/Studtest/Auth/RegisterController.php</url>
-          <line>53</line>
-          <option name="timeStamp" value="2" />
-        </line-breakpoint>
-      </breakpoints>
-    </breakpoint-manager>
   </component>
   <component name="com.intellij.coverage.CoverageDataManagerImpl">
     <SUITE FILE_PATH="coverage/Studtest@phpunit_xml.xml" NAME="phpunit.xml Coverage Results" MODIFIED="1572816101752" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="PhpCoverage" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" />

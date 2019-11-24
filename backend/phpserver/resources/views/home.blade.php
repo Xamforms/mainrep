@@ -65,19 +65,20 @@
             <h3 class="cd-header-login">Вход</h3>
             <div id="cd-login">
                 <!-- log in form -->
-                <form class="cd-form">
+                <form class="cd-form" method="post" action="/home/login">
+                    @csrf
                     <p class="fieldset">
-                        <input class="full-width has-padding has-border" id="signin-email" type="email" placeholder="E-mail"> <span class="cd-error-message">Ошибка!</span> </p>
+                        <input class="full-width has-padding has-border" name="signin-email" type="email" placeholder="E-mail"> <span class="cd-error-message">Ошибка!</span> </p>
                     <p class="fieldset">
-                        <input class="full-width has-padding has-border" id="signin-password" type="password" placeholder="Пароль"> <a href="#0" class="hide-password">Показать</a> <span class="cd-error-message">Ошибка!</span> </p>
+                        <input class="full-width has-padding has-border" name="signin-password" type="password" placeholder="Пароль"> <a href="#0" class="hide-password">Показать</a> <span class="cd-error-message">Ошибка!</span> </p>
                     <p class="fieldset">
-                        <input type="checkbox" id="remember-me" checked>
+                        <input type="checkbox" name="remember-me" checked>
                         <label for="remember-me">Запомнить меня</label>
                     </p>
                     <p class="fieldset">
                         <input class="full-width" type="submit" value="Войти"> </p>
                 </form>
-                <p class="cd-form-bottom-message"><a href="#0">Забыли пароль?</a></p>
+                <p class="cd-form-bottom-message"><a href="/home#0">Забыли пароль?</a></p>
                 <!-- <a href="#0" class="cd-close-form">Close</a> --></div>
             <!-- cd-login -->
             <div id="cd-reset-password">
@@ -100,6 +101,13 @@
             <div class="preview-picture preview-picture-home"> </div>
         </div>
         <div class="right-block-home block">
+            @if ($errors)
+                <ul>
+                    @foreach($errors->all() as $error)
+                        <li>{{$error}}</li>
+                    @endforeach
+                </ul>
+            @endif
             <h1 class="home-header">СтудТест - решайте и создавайте тесты онлайн</h1>
             <div class="home-text">
                 <p>На нашей платформе вы можете:</p>

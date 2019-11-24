@@ -1,20 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="0bb64434-99e9-410e-86c7-e41418c63100" name="Default Changelist" comment="Добавлены шаблоны и перенаправление на home после регистрации">
-      <change afterPath="$PROJECT_DIR$/backend/phpserver/.idea/webServers.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/backend/phpserver/app/Http/Controllers/Studtest/HomeController.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/backend/phpserver/app/Http/Controllers/Studtest/LKController.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/backend/phpserver/resources/views/home.blade.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/backend/phpserver/resources/views/lk-stud.blade.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/backend/phpserver/resources/views/lk-teach.blade.php" afterDir="false" />
+    <list default="true" id="0bb64434-99e9-410e-86c7-e41418c63100" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/backend/phpserver/.idea/deployment.xml" beforeDir="false" afterPath="$PROJECT_DIR$/backend/phpserver/.idea/deployment.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/backend/phpserver/.idea/laravel-plugin.xml" beforeDir="false" afterPath="$PROJECT_DIR$/backend/phpserver/.idea/laravel-plugin.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/backend/phpserver/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/backend/phpserver/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/backend/phpserver/app/Http/Controllers/Studtest/Auth/RegisterController.php" beforeDir="false" afterPath="$PROJECT_DIR$/backend/phpserver/app/Http/Controllers/Studtest/Auth/RegisterController.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/backend/phpserver/resources/views/registration.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/backend/phpserver/resources/views/registration.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/backend/phpserver/routes/web.php" beforeDir="false" afterPath="$PROJECT_DIR$/backend/phpserver/routes/web.php" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -126,7 +114,8 @@
       <workItem from="1574586316223" duration="87000" />
       <workItem from="1574594280767" duration="2675000" />
       <workItem from="1574613160367" duration="12000" />
-      <workItem from="1574630710378" duration="183000" />
+      <workItem from="1574630710378" duration="370000" />
+      <workItem from="1574636816984" duration="1000" />
     </task>
     <task id="LOCAL-00001" summary="Тестовое подключение к локалхосту">
       <created>1570035373394</created>
@@ -212,7 +201,14 @@
       <option name="project" value="LOCAL" />
       <updated>1574594559081</updated>
     </task>
-    <option name="localTasksCounter" value="13" />
+    <task id="LOCAL-00013" summary="Добавлены шаблоны страниц, контроллеры и перенаправление на home после успешной регистрации">
+      <created>1574630941816</created>
+      <option name="number" value="00013" />
+      <option name="presentableId" value="LOCAL-00013" />
+      <option name="project" value="LOCAL" />
+      <updated>1574630941816</updated>
+    </task>
+    <option name="localTasksCounter" value="14" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -288,7 +284,8 @@
     <MESSAGE value="Никита Шачнов создал home-страницу страницы личных кабинетов в public/assets/html" />
     <MESSAGE value="Никита Шачнов создал home-страницу и страницы личных кабинетов в public/assets/html" />
     <MESSAGE value="Добавлены шаблоны и перенаправление на home после регистрации" />
-    <option name="LAST_COMMIT_MESSAGE" value="Добавлены шаблоны и перенаправление на home после регистрации" />
+    <MESSAGE value="Добавлены шаблоны страниц, контроллеры и перенаправление на home после успешной регистрации" />
+    <option name="LAST_COMMIT_MESSAGE" value="Добавлены шаблоны страниц, контроллеры и перенаправление на home после успешной регистрации" />
   </component>
   <component name="antWorkspaceConfiguration">
     <option name="IS_AUTOSCROLL_TO_SOURCE" value="false" />
