@@ -83,7 +83,6 @@
                 <div class="title m-b-md">
                     Ещё не (в)курил
                 </div>
-
                 <div class="links">
                     <a href="https://laravel.com/docs">доки</a>
                     <a href="https://laracasts.com">Laracasts</a>

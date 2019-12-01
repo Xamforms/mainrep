@@ -7,8 +7,14 @@ use App\Http\Controllers\Controller;
 
 class LKController extends Controller
 {
-    function showlk (Request $request)
+    function chooselk(Request $request)
     {
-        return view('home');
+        if (session('role') == 'student') {
+            return view('lk-stud');
+        } else if (session('role') == 'teacher') {
+            return view('lk-teach');
+        } else {
+            return back()->withInput();
+        }
     }
 }

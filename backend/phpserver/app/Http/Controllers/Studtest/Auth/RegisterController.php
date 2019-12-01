@@ -36,24 +36,22 @@ class RegisterController extends Controller
         $client = new Client([
             'base_uri' => 'localhost:8081',
             'headers' => ['Content-Type' => 'application/json'],
-            /*'debug'=>fopen($_SERVER['DOCUMENT_ROOT']."/request.log", "a")*/
+            'debug'=>fopen($_SERVER['DOCUMENT_ROOT']."/regrequest.log", "a")
         ]);
         $request = new Psr7\Request('POST', '/checkreg',
             ['body' => json_encode($validatedData)]);
         try {
             $response = $client->send($request);
-            /*echo "Лог запроса:<br><br>";
-            echo file_get_contents($_SERVER['DOCUMENT_ROOT']."/request.log");*/
+            echo "Лог запроса:<br><br>";
+            echo file_get_contents($_SERVER['DOCUMENT_ROOT'] . "/regrequest.log");
             echo "<br><br>Ответ:<br><br>";
-            echo $response->getBody()."<br>";
+            echo $response->getBody() . "<br>";
             echo "Код ответа:<br>";
             echo $response->getStatusCode() . "<br>";
-            echo $response->getBody()->getContents();
-            if ($response->getReasonPhrase() == "OK") {
+            $trueresp = json_decode($response->getBody(), true);
+            if ($trueresp['status'] == "OK") {
                 return redirect()->route('HomeRoute');
-            }
-            else if ($response->getReasonPhrase() == "User already exists")
-            {
+            } else {
                 return back()->withInput();
             }
         } catch (Exception\GuzzleException $e) {

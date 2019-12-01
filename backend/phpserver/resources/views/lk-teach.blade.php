@@ -35,7 +35,7 @@
             <div class="header-content-logo"> <img src="images/logo.png" alt="логотип" class="logo"> </div>
             <div class="header-content-notification">
                 <div class="notification-button-icon"></div>
-                <div class="notification-button-counter">2</div>
+                <div class="notification-button-counter">{{0}}</div>
             </div>
             <div class="header-content-lk">
                 <div class="lk-header lk-link cd-signin">Личный кабинет</div>
@@ -62,7 +62,7 @@
                 </div>
                 </p>
                 <div class="my-groups-people-information">
-                    <div class="my-groups-people-content">Кол-во групп: <span class="number-of-groups">1</span></div>
+                    <div class="my-groups-people-content">Кол-во групп: <span class="number-of-groups">{{session('amount_of_groups') or 0}}</span></div>
                 </div>
                 <button type="submit" class="button-show-groups">Посмотреть группы</button>
             </div>
@@ -75,7 +75,7 @@
                 </div>
                 </p>
                 <div class="my-groups-people-information">
-                    <div class="my-groups-people-content">Кол-во участников: <span class="number-of-peoples">1</span></div>
+                    <div class="my-groups-people-content">Кол-во участников: <span class="number-of-peoples">{{session('amount_of_linkers') or 0}}</span></div>
                 </div>
                 <button type="submit" class="button-show-peoples">Посмотреть участников</button>
             </div>
@@ -90,14 +90,14 @@
                         <div class="block-tests-content" id="test-information3">
                             <div class="test-information-content block-have-inline-block">
                                 <div class="test-information-content-block block-have-inline-block">
-                                    <div class="test-information-content-block-date-creating">Дата создания: <span class="date-creating-test">15.10.2019</span></div>
+                                    <div class="test-information-content-block-date-creating">Дата создания: <span class="date-creating-test">{{"00.00.0000"}}</span></div>
                                     <div class="test-information-content-block-name"><span class="name-of-tests">Название теста</span></div>
-                                    <div class="test-information-content-block-date">Дата проведения: <span class="date-test">15.10.2019</span></div>
+                                    <div class="test-information-content-block-date">Дата проведения: <span class="date-test">{{"00.00.0000"}}</span></div>
                                     <div class="test-information-content-block-more">
-                                        <div class="test-information-content-block-more-timer block-have-inline-block">Таймер: <span class="timer-test">54</span> мин.</div>
-                                        <div class="test-information-content-block-more-attempt block-have-inline-block test-information-content-block-more-element">Попытки: <span class="attempt-test">3</span></div>
-                                        <div class="test-information-content-block-more-status block-have-inline-block test-information-content-block-more-element">Статус: <span class="status-test">Закрытый</span></div>
-                                        <div class="test-information-content-block-more-number-question block-have-inline-block test-information-content-block-more-element">Количество вопросов: <span class="number-question-test">15</span></div>
+                                        <div class="test-information-content-block-more-timer block-have-inline-block">Таймер: <span class="timer-test">{{0}}</span> мин.</div>
+                                        <div class="test-information-content-block-more-attempt block-have-inline-block test-information-content-block-more-element">Попытки: <span class="attempt-test">{{0}}</span></div>
+                                        <div class="test-information-content-block-more-status block-have-inline-block test-information-content-block-more-element">Статус: <span class="status-test">{{"-"}}</span></div>
+                                        <div class="test-information-content-block-more-number-question block-have-inline-block test-information-content-block-more-element">Количество вопросов: <span class="number-question-test">{{0}}</span></div>
                                         <div class="test-information-content-block-more-groups block-have-inline-block test-information-content-block-more-element"><a href="" class="test-information-content-block-more-groups-a a-style">Группы</a></div>
                                         <div class="test-information-content-block-more-peoples block-have-inline-block test-information-content-block-more-element"><a href="" class="test-information-content-block-more-peoples-a a-style">Участники</a></div>
                                         <div class="test-information-content-block-more-statistics block-have-inline-block test-information-content-block-more-element"><a href="" class="test-information-content-block-more-statistics-a a-style">Статистика</a></div>
@@ -132,45 +132,22 @@
                         <button type="submit" class="button-lk-add-test">Создать новый</button>
                     </div>
                 </div>
+                {{--@if (count(session('actual_tests'))>0)
+                    @foreach(session('actual_tests'))
                 <div class="block-tests-information">
                     <div class="block-tests-content" id="test-information1">
                         <div class="test-information-check block-have-inline-block">
                             <input class="block-tests-checkbox one" id="test-information-checkbox" data-id="active-tests" type="checkbox"> </div>
                         <div class="test-information-content block-have-inline-block">
                             <div class="test-information-content-block block-have-inline-block">
-                                <div class="test-information-content-block-date-creating">Дата создания: <span class="date-creating-test">15.10.2019</span></div>
+                                <div class="test-information-content-block-date-creating">Дата создания: <span class="date-creating-test">{{"00.00.0000"}}</span></div>
                                 <div class="test-information-content-block-name"><span class="name-of-tests">Название теста</span></div>
-                                <div class="test-information-content-block-date">Дата проведения: <span class="date-test">15.10.2019</span></div>
+                                <div class="test-information-content-block-date">Дата проведения: <span class="date-test">{{"00.00.0000"}}</span></div>
                                 <div class="test-information-content-block-more">
-                                    <div class="test-information-content-block-more-timer block-have-inline-block">Таймер: <span class="timer-test">54</span> мин.</div>
-                                    <div class="test-information-content-block-more-attempt block-have-inline-block test-information-content-block-more-element">Попытки: <span class="attempt-test">3</span></div>
+                                    <div class="test-information-content-block-more-timer block-have-inline-block">Таймер: <span class="timer-test">{{0}}</span> мин.</div>
+                                    <div class="test-information-content-block-more-attempt block-have-inline-block test-information-content-block-more-element">Попытки: <span class="attempt-test">{{0}}</span></div>
                                     <div class="test-information-content-block-more-status block-have-inline-block test-information-content-block-more-element">Статус: <span class="status-test">Закрытый</span></div>
-                                    <div class="test-information-content-block-more-number-question block-have-inline-block test-information-content-block-more-element">Количество вопросов: <span class="number-question-test">15</span></div>
-                                    <div class="test-information-content-block-more-groups block-have-inline-block test-information-content-block-more-element"><a href="" class="test-information-content-block-more-groups-a a-style">Группы</a></div>
-                                    <div class="test-information-content-block-more-peoples block-have-inline-block test-information-content-block-more-element"><a href="" class="test-information-content-block-more-peoples-a a-style">Участники</a></div>
-                                    <div class="test-information-content-block-more-statistics block-have-inline-block test-information-content-block-more-element"><a href="" class="test-information-content-block-more-statistics-a a-style">Статистика</a></div>
-                                </div>
-                            </div>
-                            <div class="test-information-content-edit block-have-inline-block">
-                                <a href="#">
-                                    <div class="test-information-content-edit-pic"></div>
-                                </a>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="block-tests-content" id="test-information2">
-                        <div class="test-information-check block-have-inline-block">
-                            <input class="block-tests-checkbox one" id="test-information-checkbox" data-id="active-tests" type="checkbox"> </div>
-                        <div class="test-information-content block-have-inline-block">
-                            <div class="test-information-content-block block-have-inline-block">
-                                <div class="test-information-content-block-date-creating">Дата создания: <span class="date-creating-test">15.10.2019</span></div>
-                                <div class="test-information-content-block-name"><span class="name-of-tests">Название теста</span></div>
-                                <div class="test-information-content-block-date">Дата проведения: <span class="date-test">15.10.2019</span></div>
-                                <div class="test-information-content-block-more">
-                                    <div class="test-information-content-block-more-timer block-have-inline-block">Таймер: <span class="timer-test">54</span> мин.</div>
-                                    <div class="test-information-content-block-more-attempt block-have-inline-block test-information-content-block-more-element">Попытки: <span class="attempt-test">3</span></div>
-                                    <div class="test-information-content-block-more-status block-have-inline-block test-information-content-block-more-element">Статус: <span class="status-test">Закрытый</span></div>
-                                    <div class="test-information-content-block-more-number-question block-have-inline-block test-information-content-block-more-element">Количество вопросов: <span class="number-question-test">15</span></div>
+                                    <div class="test-information-content-block-more-number-question block-have-inline-block test-information-content-block-more-element">Количество вопросов: <span class="number-question-test">{{0}}</span></div>
                                     <div class="test-information-content-block-more-groups block-have-inline-block test-information-content-block-more-element"><a href="" class="test-information-content-block-more-groups-a a-style">Группы</a></div>
                                     <div class="test-information-content-block-more-peoples block-have-inline-block test-information-content-block-more-element"><a href="" class="test-information-content-block-more-peoples-a a-style">Участники</a></div>
                                     <div class="test-information-content-block-more-statistics block-have-inline-block test-information-content-block-more-element"><a href="" class="test-information-content-block-more-statistics-a a-style">Статистика</a></div>
@@ -184,6 +161,8 @@
                         </div>
                     </div>
                 </div>
+                    @endforeach
+                @endif--}}
             </div>
         </div>
     </div>

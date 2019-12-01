@@ -116,6 +116,7 @@
       <workItem from="1574613160367" duration="12000" />
       <workItem from="1574630710378" duration="370000" />
       <workItem from="1574636816984" duration="1000" />
+      <workItem from="1574636927345" duration="779000" />
     </task>
     <task id="LOCAL-00001" summary="Тестовое подключение к локалхосту">
       <created>1570035373394</created>
@@ -208,7 +209,14 @@
       <option name="project" value="LOCAL" />
       <updated>1574630941816</updated>
     </task>
-    <option name="localTasksCounter" value="14" />
+    <task id="LOCAL-00014" summary="Изменён шаблон Home, добавлена валидация полей логина и отправка на сервер с БД в контроллере">
+      <created>1574637051404</created>
+      <option name="number" value="00014" />
+      <option name="presentableId" value="LOCAL-00014" />
+      <option name="project" value="LOCAL" />
+      <updated>1574637051404</updated>
+    </task>
+    <option name="localTasksCounter" value="15" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -285,7 +293,8 @@
     <MESSAGE value="Никита Шачнов создал home-страницу и страницы личных кабинетов в public/assets/html" />
     <MESSAGE value="Добавлены шаблоны и перенаправление на home после регистрации" />
     <MESSAGE value="Добавлены шаблоны страниц, контроллеры и перенаправление на home после успешной регистрации" />
-    <option name="LAST_COMMIT_MESSAGE" value="Добавлены шаблоны страниц, контроллеры и перенаправление на home после успешной регистрации" />
+    <MESSAGE value="Изменён шаблон Home, добавлена валидация полей логина и отправка на сервер с БД в контроллере" />
+    <option name="LAST_COMMIT_MESSAGE" value="Изменён шаблон Home, добавлена валидация полей логина и отправка на сервер с БД в контроллере" />
   </component>
   <component name="antWorkspaceConfiguration">
     <option name="IS_AUTOSCROLL_TO_SOURCE" value="false" />

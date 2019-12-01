@@ -45,7 +45,7 @@
                 <div class="popup-lk-setting popup-lk-sing"> Настройки профиля </div>
                 <div class="popup-lk-sing-help popup-lk-sing"> Помощь </div>
                 <div class="popup-lk-divider-line"></div>
-                <a href="#" class="send-to-page-registration">
+                <a href="/home" class="send-to-page-registration">
                     <div class="popup-lk-sing-up popup-lk-sing"> Выйти </div>
                 </a>
             </div>

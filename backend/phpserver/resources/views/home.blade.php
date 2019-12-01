@@ -68,12 +68,12 @@
                 <form class="cd-form" method="post" action="/home/login">
                     @csrf
                     <p class="fieldset">
-                        <input class="full-width has-padding has-border" name="signin-email" type="email" placeholder="E-mail"> <span class="cd-error-message">Ошибка!</span> </p>
+                        <input class="full-width has-padding has-border" name="signin_email" type="email" placeholder="E-mail"> <span class="cd-error-message">Ошибка!</span> </p>
                     <p class="fieldset">
-                        <input class="full-width has-padding has-border" name="signin-password" type="password" placeholder="Пароль"> <a href="#0" class="hide-password">Показать</a> <span class="cd-error-message">Ошибка!</span> </p>
+                        <input class="full-width has-padding has-border" name="signin_password" type="password" placeholder="Пароль"> <a href="/home#0" class="hide-password">Показать</a> <span class="cd-error-message">Ошибка!</span> </p>
                     <p class="fieldset">
-                        <input type="checkbox" name="remember-me" checked>
-                        <label for="remember-me">Запомнить меня</label>
+                        <input type="checkbox" name="remember_me" checked>
+                        <label for="remember_me">Запомнить меня</label>
                     </p>
                     <p class="fieldset">
                         <input class="full-width" type="submit" value="Войти"> </p>
@@ -90,9 +90,9 @@
                     <p class="fieldset">
                         <input class="full-width has-padding" type="submit" value="Изменить пароль"> </p>
                 </form>
-                <p class="cd-form-bottom-message"><a href="#0">Вернуться ко входу</a></p>
+                <p class="cd-form-bottom-message"><a href="/home#0">Вернуться ко входу</a></p>
             </div>
-            <!-- cd-reset-password --><a href="#0" class="cd-close-form">Закрыть</a> </div>
+            <!-- cd-reset-password --><a href="/home#0" class="cd-close-form">Закрыть</a> </div>
         <!-- cd-user-modal-container -->
     </div>
     <!-- cd-user-modal -->
