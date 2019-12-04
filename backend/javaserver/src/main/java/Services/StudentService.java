@@ -49,12 +49,12 @@ public class StudentService implements UserService_Interface{
         return configuration.buildSessionFactory(serviceRegistry);
     }
 
-    public void addUser(String name, String surname, String email, String password, String regDate) throws Exception {
+    public void addUser(String role, String name, String surname, String email, String password, String regDate) throws Exception {
         try {
             Session session = sessionFactory.openSession();
             Transaction transaction = session.beginTransaction();
             StudentsDAO dao = new StudentsDAO(session);
-            dao.insertStudent(name, surname, email, password, regDate);
+            dao.insertStudent(role, name, surname, email, password, regDate);
             transaction.commit();
             session.close();
         } catch (HibernateException e) {
@@ -74,6 +74,18 @@ public class StudentService implements UserService_Interface{
         }
     }
 
+    public StudentsDataSet getCurUserById(int id) throws Exception{
+        try {
+            Session session = sessionFactory.openSession();
+            StudentsDAO dao = new StudentsDAO(session);
+            StudentsDataSet student = dao.get(id);
+            session.close();
+            return student;
+        } catch (HibernateException e) {
+            throw new Exception(e);
+        }
+    }
+
     public List<StudentsDataSet> getCurUserByFIO(String name, String surname, String patronymic) throws Exception{
         try {
             Session session = sessionFactory.openSession();
@@ -81,6 +93,79 @@ public class StudentService implements UserService_Interface{
             List<StudentsDataSet> student = dao.getStudentsByFIO(name, surname, patronymic);
             session.close();
             return student;
+        } catch (HibernateException e) {
+            throw new Exception(e);
+        }
+    }
+
+    public List<StudentsDataSet> getCurUserBySurname(String surname) throws Exception{
+        try {
+            Session session = sessionFactory.openSession();
+            StudentsDAO dao = new StudentsDAO(session);
+            List<StudentsDataSet> students = dao.getStudentsBySurname(surname);
+            session.close();
+            return students;
+        } catch (HibernateException e) {
+            throw new Exception(e);
+        }
+    }
+
+    public List<StudentsDataSet> getCurUserByOrganization(String surname) throws Exception{
+        try {
+            Session session = sessionFactory.openSession();
+            StudentsDAO dao = new StudentsDAO(session);
+            List<StudentsDataSet> students = dao.getStudentsByOrganization(surname);
+            session.close();
+            return students;
+        } catch (HibernateException e) {
+            throw new Exception(e);
+        }
+    }
+
+    public List<StudentsDataSet> getAllUsers () throws Exception{
+        try {
+            Session session = sessionFactory.openSession();
+            StudentsDAO dao = new StudentsDAO(session);
+            List<StudentsDataSet> students = dao.getAllStudents();
+            session.close();
+            return students;
+        } catch (HibernateException e) {
+            throw new Exception(e);
+        }
+    }
+
+    public void setUser_Organization(int student_id, String organization) throws Exception{
+        try {
+            Session session = sessionFactory.openSession();
+            Transaction transaction = session.beginTransaction();
+            StudentsDAO dao = new StudentsDAO(session);
+            dao.setStudent_Organization(student_id, organization);
+            transaction.commit();
+            session.close();
+        } catch (HibernateException e) {
+            throw new Exception(e);
+        }
+    }
+
+    public void setUser_Patronymic(int student_id, String patronymic) throws Exception{
+        try {
+            Session session = sessionFactory.openSession();
+            Transaction transaction = session.beginTransaction();
+            StudentsDAO dao = new StudentsDAO(session);
+            dao.setStudent_Patronymic(student_id, patronymic);
+            transaction.commit();
+            session.close();
+        } catch (HibernateException e) {
+            throw new Exception(e);
+        }
+    }
+
+    public void removeUser(int student_id) throws Exception{
+        try {
+            Session session = sessionFactory.openSession();
+            StudentsDataSet test = getCurUserById(student_id);
+            session.remove(test);
+            session.close();
         } catch (HibernateException e) {
             throw new Exception(e);
         }

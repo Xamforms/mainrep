@@ -38,7 +38,7 @@ public class TeachersDataSet {
     @Column(name = "organization", length = 50)
     private String organization;
 
-    public TeachersDataSet(){
+    public TeachersDataSet(String role, String name, String surname, String email, String password, String regDate){
     }
 
     public TeachersDataSet(String name, String surname, String patronymic, String email, String password, String regDate,  String organization) {
