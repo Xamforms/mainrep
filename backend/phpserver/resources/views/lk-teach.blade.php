@@ -86,7 +86,9 @@
                 <label for="archive-of-tests-block">
                     <h4 class="archive-of-tests-header">Архив тестов</h4></label>
                 <div class="archive-of-tests-boxes">
+                    @if(!session('deprecated_tests').equalTo(null))
                     <div class="archive-of-tests-box">
+                        @foreach(session('actual_tests'))
                         <div class="block-tests-content" id="test-information3">
                             <div class="test-information-content block-have-inline-block">
                                 <div class="test-information-content-block block-have-inline-block">
@@ -111,7 +113,9 @@
                                 </div>
                             </div>
                         </div>
+                            @endforeach
                     </div>
+                        @endif
                 </div>
             </div>
             <div class="block-tests block-have-shadow block-have-border">
@@ -132,9 +136,9 @@
                         <button type="submit" class="button-lk-add-test">Создать новый</button>
                     </div>
                 </div>
-                {{--@if (count(session('actual_tests'))>0)
-                    @foreach(session('actual_tests'))
+                @if(!session('actual_tests').equalTo(null))
                 <div class="block-tests-information">
+                    @foreach(session('actual_tests'))
                     <div class="block-tests-content" id="test-information1">
                         <div class="test-information-check block-have-inline-block">
                             <input class="block-tests-checkbox one" id="test-information-checkbox" data-id="active-tests" type="checkbox"> </div>
@@ -160,9 +164,9 @@
                             </div>
                         </div>
                     </div>
-                </div>
                     @endforeach
-                @endif--}}
+                </div>
+                @endif
             </div>
         </div>
     </div>

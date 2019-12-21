@@ -55,7 +55,7 @@ class RegisterController extends Controller
                 return back()->withInput();
             }
         } catch (Exception\GuzzleException $e) {
-            echo file_get_contents($_SERVER['DOCUMENT_ROOT'] . "/request.log");
+            echo file_get_contents($_SERVER['DOCUMENT_ROOT'] . "/regrequest.log");
             /*if ($e->hasResponse()) {
                 echo $e->getResponse();
             }*/

@@ -17,6 +17,9 @@
   <component name="FavoritesManager">
     <favorites_list name="Studtest" />
   </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/../.." />
+  </component>
   <component name="PhpDebugGeneral" listening_started="true" />
   <component name="PhpServers">
     <servers>
@@ -240,7 +243,10 @@
       <workItem from="1574629387032" duration="7282000" />
       <workItem from="1574657856238" duration="1187000" />
       <workItem from="1574659255654" duration="294000" />
-      <workItem from="1575183803635" duration="38095000" />
+      <workItem from="1575183803635" duration="38854000" />
+      <workItem from="1575279545546" duration="677000" />
+      <workItem from="1575747613626" duration="4810000" />
+      <workItem from="1576954622230" duration="7686000" />
     </task>
     <servers />
   </component>

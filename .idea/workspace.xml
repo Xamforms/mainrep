@@ -1,9 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="0bb64434-99e9-410e-86c7-e41418c63100" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-    </list>
+    <list default="true" id="0bb64434-99e9-410e-86c7-e41418c63100" name="Default Changelist" comment="" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -117,6 +115,7 @@
       <workItem from="1574630710378" duration="370000" />
       <workItem from="1574636816984" duration="1000" />
       <workItem from="1574636927345" duration="779000" />
+      <workItem from="1575244247580" duration="778000" />
     </task>
     <task id="LOCAL-00001" summary="Тестовое подключение к локалхосту">
       <created>1570035373394</created>
@@ -216,7 +215,14 @@
       <option name="project" value="LOCAL" />
       <updated>1574637051404</updated>
     </task>
-    <option name="localTasksCounter" value="15" />
+    <task id="LOCAL-00015" summary="Добавлен логин и редирект на личный кабинет с данными в сессии, начата работа над шаблонами страниц личных кабинетов. Не получается определить количество элементов массива в сессии из шаблона.">
+      <created>1575244428517</created>
+      <option name="number" value="00015" />
+      <option name="presentableId" value="LOCAL-00015" />
+      <option name="project" value="LOCAL" />
+      <updated>1575244428517</updated>
+    </task>
+    <option name="localTasksCounter" value="16" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -294,7 +300,8 @@
     <MESSAGE value="Добавлены шаблоны и перенаправление на home после регистрации" />
     <MESSAGE value="Добавлены шаблоны страниц, контроллеры и перенаправление на home после успешной регистрации" />
     <MESSAGE value="Изменён шаблон Home, добавлена валидация полей логина и отправка на сервер с БД в контроллере" />
-    <option name="LAST_COMMIT_MESSAGE" value="Изменён шаблон Home, добавлена валидация полей логина и отправка на сервер с БД в контроллере" />
+    <MESSAGE value="Добавлен логин и редирект на личный кабинет с данными в сессии, начата работа над шаблонами страниц личных кабинетов. Не получается определить количество элементов массива в сессии из шаблона." />
+    <option name="LAST_COMMIT_MESSAGE" value="Добавлен логин и редирект на личный кабинет с данными в сессии, начата работа над шаблонами страниц личных кабинетов. Не получается определить количество элементов массива в сессии из шаблона." />
   </component>
   <component name="antWorkspaceConfiguration">
     <option name="IS_AUTOSCROLL_TO_SOURCE" value="false" />
