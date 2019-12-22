@@ -18,9 +18,9 @@
             </div>
         </div>
         <div class="test-information-content-play block-have-inline-block">
-            <a href="#">
-                <div class="test-information-content-play-pic"></div>
-            </a>
+            <form action="/constructor" method="GET">
+                <input type="button" class="test-information-content-play-pic" name="constructor" value="edit">
+            </form>
         </div>
     </div>
 </div>

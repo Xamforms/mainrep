@@ -39,7 +39,6 @@
                     <div class="my-groups-people-header">
                         <h4 class="my-groups-people-header-h4">Мои группы</h4></div>
                 </div>
-                </p>
                 <div class="my-groups-people-information">
                     <div class="my-groups-people-content">Кол-во групп: <span class="number-of-groups">{{session('amount_of_groups') or 0}}</span></div>
                 </div>
@@ -85,7 +84,9 @@
                             <input type="submit" class="block-tests-button button" value="Применить"> </form>
                     </div>
                     <div class="headers-tests-blocks headers-tests-block-new">
-                        <button type="submit" class="button-lk-add-test">Создать новый</button>
+                        <form action="/constructor" method="GET">
+                            <button type="submit" class="button-lk-add-test" name="constructor" value="create">Создать новый</button>
+                        </form>
                     </div>
                 </div>
                     <div class="block-tests-information">

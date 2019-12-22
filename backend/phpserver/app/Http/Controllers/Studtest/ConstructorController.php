@@ -10,4 +10,14 @@ class ConstructorController extends Controller
     {
         return view('lk.constructor');
     }
+
+    function createtest ()
+    {
+
+    }
+
+    function edittest ()
+    {
+
+    }
 }

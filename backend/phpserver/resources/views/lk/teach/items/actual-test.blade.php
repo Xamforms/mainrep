@@ -28,9 +28,9 @@
             </div>
         </div>
         <div class="test-information-content-edit block-have-inline-block">
-            <a href="#">
-                <div class="test-information-content-edit-pic"></div>
-            </a>
+            <form action="/constructor" method="GET" >
+                <div class="test-information-content-edit-pic" name="constructor" value="edit"></div>
+            </form>
         </div>
     </div>
 </div>
