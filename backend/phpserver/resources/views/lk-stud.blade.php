@@ -35,7 +35,7 @@
             <div class="header-content-logo"> <img src="images/logo.png" alt="логотип" class="logo"> </div>
             <div class="header-content-notification">
                 <div class="notification-button-icon"></div>
-                <div class="notification-button-counter">2</div>
+                <div class="notification-button-counter">{{0}}</div>
             </div>
             <div class="header-content-lk">
                 <div class="lk-header lk-link cd-signin">Личный кабинет</div>
@@ -58,10 +58,10 @@
             <div class="my-statistics-header"> Успеваемость</div>
             </p>
             <div class="my-statistics-information">
-                <div class="my-statistics-content block-have-inline-block">Средний балл: <span class="average-score">87</span>/100</div>
-                <div class="my-statistics-content block-have-inline-block"><a href="#" id="theme-mistake-a" class="a-style">Количество тем с ошибками: <span class="theme-mistake">3</span></a></div>
-                <div class="my-statistics-content block-have-inline-block"><a href="#" id="number-of-mistakes-a" class="a-style">Количество ошибок: <span class="number-of-mistakes">2</span></a></div>
-                <div class="my-statistics-content block-have-inline-block"><a href="#" id="number-of-attempts-a" class="a-style">Общее количество попыток: <span class="number-of-attempts">8</span></a></div>
+                <div class="my-statistics-content block-have-inline-block">Средний балл: <span class="average-score">{{0}}</span>/100</div>
+                <div class="my-statistics-content block-have-inline-block"><a href="#" id="theme-mistake-a" class="a-style">Количество тем с ошибками: <span class="theme-mistake">{{0}}</span></a></div>
+                <div class="my-statistics-content block-have-inline-block"><a href="#" id="number-of-mistakes-a" class="a-style">Количество ошибок: <span class="number-of-mistakes">{{0}}</span></a></div>
+                <div class="my-statistics-content block-have-inline-block"><a href="#" id="number-of-attempts-a" class="a-style">Общее количество попыток: <span class="number-of-attempts">{{0}}</span></a></div>
                 <div class="my-statistics-content block-have-inline-block"><a href="#" id="literature-a" class="a-style">Рекомендованная литература</a></div>
             </div>
             <button type="submit" class="button-download-pdf">Скачать в PDF</button>
@@ -72,44 +72,7 @@
                 <h4 class="access-tests-header">Доступные тесты</h4></label>
             <div class="access-tests-boxes">
                 <div class="access-tests-box">
-                    <div class="block-tests-content" id="test-information1">
-                        <div class="test-information-content block-have-inline-block">
-                            <div class="test-information-content-block block-have-inline-block">
-                                <div class="test-information-content-block-autor">Автор: <span class="autor-test">Иванов Иван Иванович</span></div>
-                                <div class="test-information-content-block-name"><span class="name-of-tests">Название теста</span></div>
-                                <div class="test-information-content-block-more">
-                                    <div class="test-information-content-block-more-timer block-have-inline-block">Таймер: <span class="timer-test">54</span> мин.</div>
-                                    <div class="test-information-content-block-more-attempt block-have-inline-block test-information-content-block-more-element">Попыток осталось: <span class="left-attempt-test">2</span></div>
-                                    <div class="test-information-content-block-more-status block-have-inline-block test-information-content-block-more-element">Статус: <span class="status-test">Закрытый</span></div>
-                                    <div class="test-information-content-block-more-next-attempt block-have-inline-block test-information-content-block-more-element">Следующая попытка: <span class="attempt-date-test">15.09.2019</span> в <span class="attempt-time-test">15:00</span></div>
-                                </div>
-                            </div>
-                            <div class="test-information-content-play block-have-inline-block">
-                                <a href="#">
-                                    <div class="test-information-content-play-pic"></div>
-                                </a>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="block-tests-content" id="test-information2">
-                        <div class="test-information-content block-have-inline-block">
-                            <div class="test-information-content-block block-have-inline-block">
-                                <div class="test-information-content-block-autor">Автор: <span class="autor-test">Иванов Иван Иванович</span></div>
-                                <div class="test-information-content-block-name"><span class="name-of-tests">Название теста</span></div>
-                                <div class="test-information-content-block-more">
-                                    <div class="test-information-content-block-more-timer block-have-inline-block">Таймер: <span class="timer-test">54</span> мин.</div>
-                                    <div class="test-information-content-block-more-attempt block-have-inline-block test-information-content-block-more-element">Попыток осталось: <span class="left-attempt-test">2</span></div>
-                                    <div class="test-information-content-block-more-status block-have-inline-block test-information-content-block-more-element">Статус: <span class="status-test">Закрытый</span></div>
-                                    <div class="test-information-content-block-more-next-attempt block-have-inline-block test-information-content-block-more-element">Следующая попытка: <span class="attempt-date-test">15.09.2019</span> в <span class="attempt-time-test">15:00</span></div>
-                                </div>
-                            </div>
-                            <div class="test-information-content-play block-have-inline-block">
-                                <a href="#">
-                                    <div class="test-information-content-play-pic"></div>
-                                </a>
-                            </div>
-                        </div>
-                    </div>
+                    @each('lk.stud.items.access-test',session('allowed_tests'),'allowed_test')
                 </div>
             </div>
         </div>
@@ -119,26 +82,7 @@
                 <h4 class="pass-tests-header">Пройденные тесты</h4></label>
             <div class="pass-tests-boxes">
                 <div class="pass-tests-box">
-                    <div class="block-tests-content" id="test-information3">
-                        <div class="test-information-content block-have-inline-block">
-                            <div class="test-information-content-block block-have-inline-block">
-                                <div class="test-information-content-block-autor">Автор: <span class="autor-test">Иванов Иван Иванович</span></div>
-                                <div class="test-information-content-block-name"><span class="name-of-tests">Название теста</span></div>
-                                <div class="test-information-content-block-more">
-                                    <div class="test-information-content-block-more-timer block-have-inline-block">Таймер: <span class="timer-test">54</span> мин.</div>
-                                    <div class="test-information-content-block-more-attempt block-have-inline-block test-information-content-block-more-element">Попыток осталось: <span class="left-attempt-test">2</span></div>
-                                    <div class="test-information-content-block-more-status block-have-inline-block test-information-content-block-more-element">Статус: <span class="status-test">Закрытый</span></div>
-                                    <div class="test-information-content-block-more-next-attempt block-have-inline-block test-information-content-block-more-element">Следующая попытка: <span class="attempt-date-test">15.09.2019</span> в <span class="attempt-time-test">15:00</span></div>
-                                    <div class="test-information-content-block-more-score block-have-inline-block test-information-content-block-more-element">Балл: <span class="score-test">94</span>/<span class="max-score-test">100</span></div>
-                                </div>
-                            </div>
-                            <div class="test-information-content-settings block-have-inline-block">
-                                <div class="test-information-content-settings-recomend"><a href="" class="test-information-content-settings-recomend-a a-style">Рекомендации</a></div>
-                                <div class="test-information-content-settings-request-attempt"><a href="" class="test-information-content-settings-request-attempt-a a-style">Запросить попытку</a></div>
-                                <div class="test-information-content-settings-show-result"><a href="" class="test-information-content-settings-show-result-a a-style">Помотреть результат</a></div>
-                            </div>
-                        </div>
-                    </div>
+                    @each('lk.stud.items.pass-test',session('passed_tests'),'passed_test')
                 </div>
             </div>
         </div>

@@ -4,7 +4,7 @@
                 <div class="test-information-content-block block-have-inline-block">
                     <div class="test-information-content-block-date-creating">Дата создания: <span
                                 class="date-creating-test">{{"00.00.0000"}}</span></div>
-                    <div class="test-information-content-block-name"><span class="name-of-tests">Название теста</span>
+                    <div class="test-information-content-block-name"><span class="name-of-tests">{{"Unknown test"}}</span>
                     </div>
                     <div class="test-information-content-block-date">Дата проведения: <span
                                 class="date-test">{{"00.00.0000"}}</span></div>
