@@ -53,7 +53,7 @@
                 <div class="list-element">Вопрос №<span class="numder-question">10</span></div>
                 <div class="list-element">Вопрос №<span class="numder-question">11</span></div>
             </div>
-            <div class="complete-test"><a class="a-complete-test" href="html/result-test.html"><div class="button button-complete-test">Завершить тест</div></a></div>
+            <div class="complete-test"><a class="a-complete-test" href="/lk/starttest/finishtest"><div class="button button-complete-test">Завершить тест</div></a></div>
         </div>
         <div class="right-block-lk-teacher block">
             <div class="block-questions block-have-shadow block-have-border">

@@ -48,14 +48,6 @@
                         <label class="cd-label" for="question-score">Колличество баллов</label>
                         <input class="full-width has-padding has-border" id="number-of-score" type="text" placeholder="По умолчанию 1 балл" name="question-score"> <span class="cd-error-message">Ошибка!</span> </p>
                     <p class="fieldset">
-                        <label class="cd-label" for="select-section-question">Раздел вопроса</label>
-                        <br>
-                        <select placeholder="Раздел" name="select-section-question" class="select-section-question block-have-shadow block-have-border">
-                            <option>Раздел 1</option>
-                            <option>Раздел 2</option>
-                        </select>
-                    </p>
-                    <p class="fieldset">
                         <label class="cd-label" for="text-question">Введите вопрос <span class="mark">*</span></label>
                         <textarea class="question-textarea" placeholder="Введите Ваш вопрос" name="text-question"></textarea>
                     </p>
@@ -186,23 +178,6 @@
             </div>
         </div>
         <div class="right-block-constructor block">
-            <div class="section-questions">
-                <div class="section-qeustions-new-section">Добавить раздел теста</div>
-                <a href="#">
-                    <div class="new-section-icon div-is-icon"></div>
-                </a>
-                <div class="section-questions-container">
-                    <div class="section-qeustions-name">
-                        <form action="#" method="post">
-                            <input type="text" name="name-section" placeholder="Название раздела" required class="section-qeustions-name-input"> </form>
-                    </div>
-                    <div class="del-section-icon-container">
-                        <a href="#">
-                            <div class="del-section-icon div-is-icon"></div>
-                        </a>
-                    </div>
-                </div>
-            </div>
             <div class="buttons-new-question main-nav">
                 <button class="button-new-question popup-open-button-new-question">Добавить вопрос</button>
             </div>

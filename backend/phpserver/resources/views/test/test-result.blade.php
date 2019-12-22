@@ -96,7 +96,7 @@
                 </div>
                 <br>
                 <div class="back-lk">
-                    <a class="a-back-lk" href="html/lk-student.html">
+                    <a class="a-back-lk" href="/lk">
                         <div class="button button-back-lk">Вернуться в личный кабинет</div>
                     </a>
                 </div>

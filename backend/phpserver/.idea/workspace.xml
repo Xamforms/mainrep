@@ -1,9 +1,16 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="dac5f345-84a2-45e2-9c03-ba07a816afeb" name="Default Changelist" comment="Пока работающий проект, добавляю класс теста">
-      <change afterPath="$PROJECT_DIR$/resources/test.php" afterDir="false" />
+    <list default="true" id="dac5f345-84a2-45e2-9c03-ba07a816afeb" name="Default Changelist" comment="Ведётся работа по создаанию конструктора">
+      <change afterPath="$PROJECT_DIR$/resources/php/test.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/Studtest/ConstructorController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/Studtest/ConstructorController.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/test.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/lk/constructor.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/lk/constructor.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/test/test-greeting.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/test/test-greeting.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/test/test-result.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/test/test-result.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/test/test.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/test/test.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/routes/web.php" beforeDir="false" afterPath="$PROJECT_DIR$/routes/web.php" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -159,11 +166,11 @@
       <recent name="E:\ProgramData\webprog\Laravel\Studtest\resources\views" />
     </key>
     <key name="MoveFile.RECENT_KEYS">
+      <recent name="E:\Projects\GIT\mainrep\backend\phpserver\resources\php" />
       <recent name="E:\Projects\GIT\mainrep\backend\phpserver\app\Http\Controllers\Studtest" />
       <recent name="E:\Projects\GIT\mainrep\backend\phpserver\resources\views\lk" />
       <recent name="E:\Projects\GIT\mainrep\backend\phpserver\resources\views\lk\teach" />
       <recent name="E:\Projects\GIT\mainrep\backend\phpserver\resources\views\lk\stud" />
-      <recent name="E:\Projects\GIT\mainrep\backend\phpserver\resources\views\test" />
     </key>
   </component>
   <component name="RunDashboard">
@@ -256,7 +263,7 @@
       <workItem from="1575747613626" duration="4810000" />
       <workItem from="1576954622230" duration="7686000" />
       <workItem from="1576966642339" duration="107000" />
-      <workItem from="1577000948741" duration="29228000" />
+      <workItem from="1577000948741" duration="36335000" />
     </task>
     <task id="LOCAL-00001" summary="Медленное начало: просто добавил html Никиты">
       <created>1576966735099</created>
@@ -300,7 +307,14 @@
       <option name="project" value="LOCAL" />
       <updated>1577035602626</updated>
     </task>
-    <option name="localTasksCounter" value="7" />
+    <task id="LOCAL-00007" summary="Создаётся класс для теста">
+      <created>1577044185258</created>
+      <option name="number" value="00007" />
+      <option name="presentableId" value="LOCAL-00007" />
+      <option name="project" value="LOCAL" />
+      <updated>1577044185258</updated>
+    </task>
+    <option name="localTasksCounter" value="8" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -327,7 +341,9 @@
     <MESSAGE value="Попытки сделать конструктор тестов, возможны проблемы с идентификацией сессии" />
     <MESSAGE value="Страницы разнесены по шаблонам" />
     <MESSAGE value="Добавлены контроллеры,роутеры организуется переход в конструктор" />
-    <option name="LAST_COMMIT_MESSAGE" value="Добавлены контроллеры,роутеры организуется переход в конструктор" />
+    <MESSAGE value="Создаётся класс для теста" />
+    <MESSAGE value="Ведётся работа по создаанию конструктора" />
+    <option name="LAST_COMMIT_MESSAGE" value="Ведётся работа по создаанию конструктора" />
   </component>
   <component name="com.intellij.coverage.CoverageDataManagerImpl">
     <SUITE FILE_PATH="coverage/Studtest@phpunit_xml.xml" NAME="phpunit.xml Coverage Results" MODIFIED="1572816101752" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="PhpCoverage" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" />

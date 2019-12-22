@@ -43,7 +43,7 @@
                 <br>
                 <p class="name-parametr">Количество попыток: <span class="attempt-test">3</span></p>
                 <br>
-                <div class="open-test"><a class="a-open-test" href="html/test.html"><div class="button button-open-test">Начать тест</div></a></div>
+                <div class="open-test"><a class="a-open-test" href="/lk/starttest/testing"><div class="button button-open-test">Начать тест</div></a></div>
 
             </div>
         </div>

@@ -34,7 +34,7 @@ Route::post('/registration/newuser', 'Studtest\Auth\RegisterController@submitreg
 
 Route::post('/home/login', 'Studtest\Auth\LoginController@submitlogform');
 
-Route::get('/lk/constructor', 'Studtest\ConstructorController@showconstructor');
+Route::get('/lk/constructor', 'Studtest\ConstructorController@showConstructor');
 
 Route::post('/lk/constructor/createtest', 'Studtest\ConstructorController@edittest');
 
