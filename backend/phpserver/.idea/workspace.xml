@@ -1,15 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="dac5f345-84a2-45e2-9c03-ba07a816afeb" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/app/Http/Controllers/Studtest/TestingController.php" afterDir="false" />
+    <list default="true" id="dac5f345-84a2-45e2-9c03-ba07a816afeb" name="Default Changelist" comment="Пока работающий проект, добавляю класс теста">
+      <change afterPath="$PROJECT_DIR$/resources/test.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/Studtest/ConstructorController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/Studtest/ConstructorController.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/studtest/assets/css/style.css" beforeDir="false" afterPath="$PROJECT_DIR$/public/studtest/assets/css/style.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/lk/stud/items/access-test.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/lk/stud/items/access-test.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/lk/teach/items/actual-test.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/lk/teach/items/actual-test.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/lk/teach/lk-teach.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/lk/teach/lk-teach.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/routes/web.php" beforeDir="false" afterPath="$PROJECT_DIR$/routes/web.php" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -262,7 +256,7 @@
       <workItem from="1575747613626" duration="4810000" />
       <workItem from="1576954622230" duration="7686000" />
       <workItem from="1576966642339" duration="107000" />
-      <workItem from="1577000948741" duration="23287000" />
+      <workItem from="1577000948741" duration="29228000" />
     </task>
     <task id="LOCAL-00001" summary="Медленное начало: просто добавил html Никиты">
       <created>1576966735099</created>
@@ -299,7 +293,14 @@
       <option name="project" value="LOCAL" />
       <updated>1577026224918</updated>
     </task>
-    <option name="localTasksCounter" value="6" />
+    <task id="LOCAL-00006" summary="Добавлены контроллеры,роутеры организуется переход в конструктор">
+      <created>1577035602626</created>
+      <option name="number" value="00006" />
+      <option name="presentableId" value="LOCAL-00006" />
+      <option name="project" value="LOCAL" />
+      <updated>1577035602626</updated>
+    </task>
+    <option name="localTasksCounter" value="7" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -325,7 +326,8 @@
     <MESSAGE value="Обозначены переменные для шаблона студента" />
     <MESSAGE value="Попытки сделать конструктор тестов, возможны проблемы с идентификацией сессии" />
     <MESSAGE value="Страницы разнесены по шаблонам" />
-    <option name="LAST_COMMIT_MESSAGE" value="Страницы разнесены по шаблонам" />
+    <MESSAGE value="Добавлены контроллеры,роутеры организуется переход в конструктор" />
+    <option name="LAST_COMMIT_MESSAGE" value="Добавлены контроллеры,роутеры организуется переход в конструктор" />
   </component>
   <component name="com.intellij.coverage.CoverageDataManagerImpl">
     <SUITE FILE_PATH="coverage/Studtest@phpunit_xml.xml" NAME="phpunit.xml Coverage Results" MODIFIED="1572816101752" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="PhpCoverage" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" />
