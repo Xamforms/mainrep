@@ -53,9 +53,6 @@ class LoginController extends Controller
                     'amount_of_groups' => $userdata['amount_of_groups'],
                     'amount_of_linkers' => 0
                 ]);
-
-                var_dump(session('deprecated_tests'));
-                dd(session());
                 return redirect()->action('Studtest\LKController@chooselk');
             } else {
                 return back()->withInput();
