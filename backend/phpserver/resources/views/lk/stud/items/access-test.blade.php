@@ -1,4 +1,4 @@
-<div class="block-tests-content" id="test-information1">
+<div class="block-tests-content" id="test-information{{"ID"}}">
     <div class="test-information-content block-have-inline-block">
         <div class="test-information-content-block block-have-inline-block">
             <div class="test-information-content-block-autor">Автор: <span

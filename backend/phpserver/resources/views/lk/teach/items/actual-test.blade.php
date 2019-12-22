@@ -1,4 +1,4 @@
-<div class="block-tests-content" id="test-information1">
+<div class="block-tests-content" id="test-information{{"ID"}}">
     <div class="test-information-check block-have-inline-block">
         <input class="block-tests-checkbox one" id="test-information-checkbox" data-id="active-tests"
                type="checkbox"></div>

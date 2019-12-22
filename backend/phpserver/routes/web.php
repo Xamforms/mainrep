@@ -34,3 +34,5 @@ Route::post('/registration/newuser', 'Studtest\Auth\RegisterController@submitreg
 
 Route::post('/home/login', 'Studtest\Auth\LoginController@submitlogform');
 
+Route::get('/constructor', 'Studtest\ConstructorController@showconstructor');
+
