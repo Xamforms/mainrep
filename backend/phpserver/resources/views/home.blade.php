@@ -38,26 +38,7 @@
 
 <body>
 <div class="body">
-    <div class="header container">
-        <div class="header-content">
-            <div class="header-content-logo"> <img src="images/logo.png" alt="логотип" class="logo"> </div>
-            <div class="header-content-notification">
-                <div class="notification-button-icon"></div>
-                <div class="notification-button-counter">2</div>
-            </div>
-            <div class="header-content-lk">
-                <div class="lk-header lk-link cd-signin">Личный кабинет</div>
-                <div class="lk-icon"></div>
-            </div>
-            <div class="popup-lk main-nav">
-                <div class="popup-lk-sing-in popup-lk-sing"> Войти </div>
-                <div class="popup-lk-divider-line"></div>
-                <a href="registration.html" class="send-to-page-registration">
-                    <div class="popup-lk-sing-up popup-lk-sing"> Зарегистрироваться </div>
-                </a>
-            </div>
-        </div>
-    </div>
+    @include('common.header')
     <div class="cd-user-modal">
         <!-- this is the entire modal form, including the background -->
         <div class="cd-user-modal-container">

@@ -8,6 +8,6 @@ class ConstructorController extends Controller
 {
     function showconstructor ()
     {
-        return view('constructor');
+        return view('lk.constructor');
     }
 }
