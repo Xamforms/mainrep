@@ -1,21 +1,27 @@
 <?php
-class Test
+class SomeTest
 {
-    private $name;
+    private $name = "Добавьте название";
     private $authorID;
     private $questions = [];
 
-    /**
-     * Test constructor.
-     * @param $name
-     * @param $authorID
-     * @param array $questions
-     */
-    public function __construct($name, $authorID, array $questions)
+    public function __construct(){}
+
+    public static function create()
     {
-        $this->name = $name;
-        $this->authorID = $authorID;
-        $this->questions = $questions;
+        $instance = new self();
+        $instance->authorID = session('userID');
+        $instance->questions = [Question::create()];
+        return $instance;
+    }
+
+    public static function edit(string $name, array $questions)
+    {
+        $instance = new self();
+        $instance->name = $name;
+        $instance->authorID = session('userID');
+        $instance->questions = $questions;
+        return $instance;
     }
 
     /**
@@ -29,7 +35,7 @@ class Test
     /**
      * @param mixed $name
      */
-    public function setName($name): void
+    public function setName(string $name): void
     {
         $this->name = $name;
     }
@@ -66,31 +72,45 @@ class Test
         $this->questions = $questions;
     }
 
-    public function addQuestion($name, $answer):void
+    public function addQuestion(string $name, $question):void
     {
-        $this->questions[$name]=$answer;
+        $this->questions[$name]=$question;
     }
 
-    public function removeQuestion($name)
+    public function removeQuestion($questionname)
     {
-        unset($this->questions[$name]);
+        unset($this->questions[$questionname]);
     }
 }
 
 class Question
 {
-    private $name;
-    private $answers =[];
+    private $name = "Добавьте вопрос";
+    private $quality = 2;
+    private $answers = [];
 
-    /**
-     * Question constructor.
-     * @param $name
-     * @param array $answers
-     */
-    public function __construct($name, array $answers)
+    public function __construct(){}
+
+    public static function create()
     {
-        $this->name = $name;
-        $this->answers = $answers;
+        $instance = new self();
+        $instance->answers = [
+            Answer::create("Добавьте ответ 1",false),
+            Answer::create("Добавьте ответ 2",false),
+            Answer::create("Добавьте ответ 3",true),
+            Answer::create("Добавьте ответ 1",false)
+        ];
+        return $instance;
+    }
+
+
+    public static function edit (string $name, int $quality, array $answers)
+    {
+        $instance = new self();
+        $instance->answers = $answers;
+        $instance->name=$name;
+        $instance->quality = $quality;
+        return $instance;
     }
 
     /**
@@ -104,7 +124,7 @@ class Question
     /**
      * @param mixed $name
      */
-    public function setName($name): void
+    public function setName(string $name): void
     {
         $this->name = $name;
     }
@@ -125,14 +145,78 @@ class Question
         $this->answers = $answers;
     }
 
-public function addAnswer($name, $answer):void
-{
-    $this->answers[$name]=$answer;
+    public function addAnswer(string $name, $answer): void
+    {
+        $this->answers[$name] = $answer;
+    }
+
+    public function removeAnswer($answername)
+    {
+        unset($this->answers[$answername]);
+    }
+
+    /**
+     * @return int
+     */
+    public function getQuality(): int
+    {
+        return $this->quality;
+    }
+
+    /**
+     * @param int $quality
+     */
+    public function setQuality(int $quality): void
+    {
+        $this->quality = $quality;
+    }
 }
 
-public function removeAnswer($name)
+class Answer
 {
-    unset($this->answers[$name]);
-}
+    private $name = "Добавьте ответ";
+    private $type = false;
+
+    public function __construct(){}
+
+    public static function create(string $name, bool $type)
+    {
+        $instance = new self();
+        $instance->name = $name;
+        $instance->type = $type;
+        return $instance;
+    }
+
+    /**
+     * @return string
+     */
+    public function getName(): string
+    {
+        return $this->name;
+    }
+
+    /**
+     * @param string $name
+     */
+    public function setName(string $name): void
+    {
+        $this->name = $name;
+    }
+
+    /**
+     * @return bool
+     */
+    public function isType(): bool
+    {
+        return $this->type;
+    }
+
+    /**
+     * @param bool $type
+     */
+    public function setType(bool $type): void
+    {
+        $this->type = $type;
+    }
 }
 ?>

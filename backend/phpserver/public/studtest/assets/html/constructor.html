@@ -22,6 +22,24 @@
             $('.main-nav').trigger('click');
             $('.popup-open-button-answers').trigger('click');
         });*/
+        $(function () {
+            $(".cd-new-answer-icon").click(function (e) {
+                $('.cd-answers-add').append('\n' +
+                    '                    <div class="cd-answer-container  block-have-border block-have-shadow">\n' +
+                    '                        <div class="cd-answer-check block-have-inline-block">\n' +
+                    '                            <input class="cd-answer-checkbox" id="constructor-answer-checkbox1" type="checkbox"> </div>\n' +
+                    '                        <div class="cd-answer-text">\n' +
+                    '                            <form action="#" method="post">\n' +
+                    '                                <input type="text" name="text-answer" placeholder="Ответ" required class="cd-answer-text-input"> </form>\n' +
+                    '                        </div>\n' +
+                    '                        <div class="cd-del-answer-icon-container">\n' +
+                    '                            <a href="#">\n' +
+                    '                                <div class="cd-del-answer-icon div-is-icon"></div>\n' +
+                    '                            </a>\n' +
+                    '                        </div>\n' +
+                    '                    </div>');
+            });
+        });
     </script>
     <script type="text/javascript">
         $(document).mouseup(function (e) {
@@ -90,9 +108,7 @@
                     <div class="cd-answers-add cd-answers-block">
                         <div class="cd-header-answer-right block-have-inline-block">Правильный(-ые)</div>
                         <div class="cd-header-add-answer block-have-inline-block">Добавить ответ</div>
-                        <a href="#">
-                            <div class="cd-new-answer-icon div-is-icon"></div>
-                        </a>
+                        <div class="cd-new-answer-icon div-is-icon"></div>
                         <div class="cd-answer-container  block-have-border block-have-shadow">
                             <div class="cd-answer-check block-have-inline-block">
                                 <input class="cd-answer-checkbox" id="constructor-answer-checkbox1" type="checkbox"> </div>

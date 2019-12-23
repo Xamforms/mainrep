@@ -1,16 +1,15 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="dac5f345-84a2-45e2-9c03-ba07a816afeb" name="Default Changelist" comment="Ведётся работа по создаанию конструктора">
-      <change afterPath="$PROJECT_DIR$/resources/php/test.php" afterDir="false" />
+    <list default="true" id="dac5f345-84a2-45e2-9c03-ba07a816afeb" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/resources/views/lk/teach/constructor/items/question-modal.blade.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/Studtest/Auth/LoginController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/Studtest/Auth/LoginController.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/Http/Controllers/Studtest/ConstructorController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/Studtest/ConstructorController.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/test.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/lk/constructor.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/lk/constructor.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/test/test-greeting.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/test/test-greeting.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/test/test-result.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/test/test-result.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/test/test.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/test/test.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/routes/web.php" beforeDir="false" afterPath="$PROJECT_DIR$/routes/web.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/studtest/assets/html/constructor.html" beforeDir="false" afterPath="$PROJECT_DIR$/public/studtest/assets/html/constructor.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/php/test.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/php/test.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/lk/constructor.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/lk/teach/constructor/constructor.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/lk/teach/lk-teach.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/lk/teach/lk-teach.blade.php" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -161,16 +160,16 @@
     <property name="settings.editor.selected.configurable" value="reference.webide.settings.project.settings.php.debug" />
   </component>
   <component name="RecentsManager">
-    <key name="CopyFile.RECENT_KEYS">
-      <recent name="E:\ProgramData\webprog\Laravel\Studtest\public" />
-      <recent name="E:\ProgramData\webprog\Laravel\Studtest\resources\views" />
-    </key>
     <key name="MoveFile.RECENT_KEYS">
+      <recent name="E:\Projects\GIT\mainrep\backend\phpserver\resources\views\lk\teach\constructor" />
       <recent name="E:\Projects\GIT\mainrep\backend\phpserver\resources\php" />
       <recent name="E:\Projects\GIT\mainrep\backend\phpserver\app\Http\Controllers\Studtest" />
       <recent name="E:\Projects\GIT\mainrep\backend\phpserver\resources\views\lk" />
       <recent name="E:\Projects\GIT\mainrep\backend\phpserver\resources\views\lk\teach" />
-      <recent name="E:\Projects\GIT\mainrep\backend\phpserver\resources\views\lk\stud" />
+    </key>
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="E:\ProgramData\webprog\Laravel\Studtest\public" />
+      <recent name="E:\ProgramData\webprog\Laravel\Studtest\resources\views" />
     </key>
   </component>
   <component name="RunDashboard">
@@ -263,7 +262,8 @@
       <workItem from="1575747613626" duration="4810000" />
       <workItem from="1576954622230" duration="7686000" />
       <workItem from="1576966642339" duration="107000" />
-      <workItem from="1577000948741" duration="36335000" />
+      <workItem from="1577000948741" duration="36579000" />
+      <workItem from="1577079644533" duration="16558000" />
     </task>
     <task id="LOCAL-00001" summary="Медленное начало: просто добавил html Никиты">
       <created>1576966735099</created>
@@ -314,7 +314,14 @@
       <option name="project" value="LOCAL" />
       <updated>1577044185258</updated>
     </task>
-    <option name="localTasksCounter" value="8" />
+    <task id="LOCAL-00008" summary="Ведётся работа по создаанию конструктора">
+      <created>1577053478205</created>
+      <option name="number" value="00008" />
+      <option name="presentableId" value="LOCAL-00008" />
+      <option name="project" value="LOCAL" />
+      <updated>1577053478205</updated>
+    </task>
+    <option name="localTasksCounter" value="9" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">

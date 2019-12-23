@@ -84,7 +84,7 @@
                             <input type="submit" class="block-tests-button button" value="Применить"> </form>
                     </div>
                     <div class="headers-tests-blocks headers-tests-block-new">
-                        <form action="/constructor" method="GET">
+                        <form action="/lk/constructor" method="GET">
                             <button type="submit" class="button-lk-add-test" name="constructor" value="create">Создать новый</button>
                         </form>
                     </div>

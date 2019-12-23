@@ -3,13 +3,26 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
-include ($_SERVER['DOCUMENT_ROOT'].'resources/php/test.php');
+use SomeTest, Question;
 
 class ConstructorController extends Controller
 {
-    function showConstructor ()
+    function showConstructor (Request $request)
     {
-        return view('lk.constructor');
+        $constructormode = $this->validate($request,[
+            'constructor'=>'required|in:edit,create'
+        ]);
+        if ($constructormode=='create')
+        {
+            session([
+                'test'=> SomeTest::create()
+            ]);
+        }
+        else
+        {
+
+        }
+        return view('lk.teach.constructor.constructor');
     }
 
     function createTest (Request $request)

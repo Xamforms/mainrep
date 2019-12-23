@@ -48,6 +48,7 @@ class LoginController extends Controller
             } else if ($userdata['status'] == "OK" && $userdata['role'] == "teacher") {
                 session([
                     'role' => $userdata['role'],
+                    'userID'=> $userdata['userId'],
                     'actual_tests' => json_decode($userdata['actual_tests'],true),
                     'deprecated_tests' => json_decode($userdata['deprecated_tests'],true),
                     'amount_of_groups' => $userdata['amount_of_groups'],

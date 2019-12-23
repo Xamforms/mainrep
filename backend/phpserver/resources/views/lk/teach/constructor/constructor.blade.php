@@ -22,6 +22,23 @@
             $('.main-nav').trigger('click');
             $('.popup-open-button-answers').trigger('click');
         });*/
+        $(function () {
+            $(".cd-new-answer-icon").click(function (e) {
+                $('.cd-answers-add').append('\n' +
+                    '                    <div class="cd-answer-container  block-have-border block-have-shadow">\n' +
+                    '                        <div class="cd-answer-check block-have-inline-block">\n' +
+                    '                            <input class="cd-answer-checkbox" id="constructor-answer-checkbox1" type="checkbox"> </div>\n' +
+                    '                        <div class="cd-answer-text">\n' +
+                    '                                <input type="text" name="text-answer" placeholder="Ответ" required class="cd-answer-text-input">\n' +
+                    '                        </div>\n' +
+                    '                        <div class="cd-del-answer-icon-container">\n' +
+                    '                            <a href="#">\n' +
+                    '                                <div class="cd-del-answer-icon div-is-icon"></div>\n' +
+                    '                            </a>\n' +
+                    '                        </div>\n' +
+                    '                    </div>');
+            });
+        });
     </script>
     <script type="text/javascript">
         $(document).mouseup(function (e) {
@@ -66,6 +83,8 @@
         </div>
         <!-- cd-constructor-modal-container -->
     </div>
+
+
     <!-- cd-constructor-modal -->
     <div class="cd-answers-modal">
         <!-- this is the entire modal form, including the background -->
@@ -80,37 +99,12 @@
                     <div class="block-questions-text">Пример текста вопроса</div>
                 </div>
                 <div class="cd-answers-add cd-answers-block">
+
                     <div class="cd-header-answer-right block-have-inline-block">Правильный(-ые)</div>
                     <div class="cd-header-add-answer block-have-inline-block">Добавить ответ</div>
-                    <a href="#">
-                        <div class="cd-new-answer-icon div-is-icon"></div>
-                    </a>
-                    <div class="cd-answer-container  block-have-border block-have-shadow">
-                        <div class="cd-answer-check block-have-inline-block">
-                            <input class="cd-answer-checkbox" id="constructor-answer-checkbox1" type="checkbox"> </div>
-                        <div class="cd-answer-text">
-                            <form action="#" method="post">
-                                <input type="text" name="text-answer" placeholder="Ответ" required class="cd-answer-text-input"> </form>
-                        </div>
-                        <div class="cd-del-answer-icon-container">
-                            <a href="#">
-                                <div class="cd-del-answer-icon div-is-icon"></div>
-                            </a>
-                        </div>
-                    </div>
-                    <div class="cd-answer-container  block-have-border block-have-shadow">
-                        <div class="cd-answer-check block-have-inline-block">
-                            <input class="cd-answer-checkbox" id="constructor-answer-checkbox2" type="checkbox"> </div>
-                        <div class="cd-answer-text">
-                            <form action="#" method="post">
-                                <input type="text" name="text-answer" placeholder="Ответ" required class="cd-answer-text-input"> </form>
-                        </div>
-                        <div class="cd-del-answer-icon-container">
-                            <a href="#">
-                                <div class="cd-del-answer-icon div-is-icon"></div>
-                            </a>
-                        </div>
-                    </div>
+                    <div class="cd-new-answer-icon div-is-icon"></div>
+                    @each('lk.teach.constructor.items.question-modal',session('test')->getQuestions(),'question')
+
                 </div>
                 <div class="cd-block-button cd-answers-block">
                     <button type="submit" class="cd-btn-save">Готово</button>
@@ -121,21 +115,20 @@
         <!-- cd-constructor-modal-container -->
     </div>
     <!-- cd-constructor-modal -->
+
+
     @include('common.header')
     <div class="content-body container">
         <div class="top-block-constructor block">
             <div class="top-block-constructor-param-test block-have-inline-block">
                 <div class="top-block-constructor-param-test-name">
-                    <form action="#" method="post">
-                        <input type="text" name="name-test" placeholder="Название теста" required class="top-block-constructor-param-test-name-input"> </form>
+                        <input type="text" name="name-test" placeholder="Название теста" required class="top-block-constructor-param-test-name-input">
                 </div>
                 <div class="top-block-constructor-param-test-description">
-                    <form action="#" method="post">
                         <div class="description-textarea-header">Описание теста (отображается при прохождении)</div>
                         <p>
                             <textarea class="description-textarea" placeholder="Небольшое описание теста перед началом прохождения (правила, общая информация и прочее)" name="text"></textarea>
                         </p>
-                    </form>
                 </div>
             </div>
             <div class="top-block-constructor-buttons block-have-inline-block">
@@ -181,47 +174,11 @@
             <div class="buttons-new-question main-nav">
                 <button class="button-new-question popup-open-button-new-question">Добавить вопрос</button>
             </div>
-            <div class="block-questions block-have-shadow block-have-border">
-                <div class="block-questions-container">
-                    <div class="block-questions-section-and-score block-questions-style">
-                        <div class="block-questions-section block-have-inline-block">
-                            <div class="block-questions-header">Раздел:</div>
-                            <div class="block-questions-text">Развитие промышленности в средневековье</div>
-                        </div>
-                        <div class="block-questions-header block-questions-score block-have-inline-block">Балл: <span class="score-question">4</span></div>
-                    </div>
-                    <div class="block-questions-question block-questions-style">
-                        <div class="block-questions-header">Вопрос:</div>
-                        <div class="block-questions-text">Очень хороший ответ на очень хороший вопрос от от очень хорошего преподавателя очень хорошим ученикам очень хорошего ВУЗа.</div>
-                    </div>
-                    <div class="block-questions-answer block-questions-style">
-                        <div class="block-questions-header">Ответы:</div>
-                        <div class="block-questions-answer-container block-questions-text">
-                            <div class="radio form-input-question">
-                                <label>
-                                    <input type="radio" name="standing" value="вар1">Вариант ответа 1</label>
-                                <label>
-                                    <input type="radio" name="standing" value="вар2">Очень очень очень длинный вариант ответа на вопрос от очень хорошего преподавателя очень хорошим ученикам очень хорошего ВУЗа (МИРЭА) </label>
-                                <label>
-                                    <input type="radio" name="standing" value="вар3">Вариант ответа 3</label>
-                                <label>
-                                    <input type="radio" name="standing" value="вар4">Вариант ответа 4</label>
-                            </div>
-                        </div>
-                        <!--- <div class="block-questions-files">
-                        <div class="block-questions-header">Прикреплённые файлы: </div>
-                        <div class="block-questions-files-container"> </div>
-                    </div> ---></div>
-                </div>
-                <div class="block-questions-buttons main-nav">
-                    <button type="submit" class="buttons-of-question button-delete-question">Удалить</button>
-                    <button type="submit" class="buttons-of-question button-edit-question popup-open-button-new-question">Редактировать вопрос</button>
-                    <button type="submit" class="buttons-of-question button-edit-answer popup-open-button-answers">Редактировать ответ</button>
-                </div>
-            </div>
+            @each('lk.teach.constructor.items.question',session('test')->getQuestions(), 'question')
         </div>
     </div>
     @include('common.footer')
+
 </div>
 </body>
 </html>
