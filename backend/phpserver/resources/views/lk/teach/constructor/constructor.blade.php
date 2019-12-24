@@ -39,6 +39,26 @@
                     '                    </div>');
             });
         });
+        $(function () {
+            $(".block-questions-buttons.main-nav").parents('div.block-questions.block-have-shadow.block-have-border').find('div.radio.form-input-question').find('label').each(function () {
+//   console.log($(this).text());
+                    $('body').find('div.cd-answers-add.cd-answers-block').append(
+                        '<div class="cd-answer-container  block-have-border block-have-shadow">\n' +
+                        '                            <div class="cd-answer-check block-have-inline-block">\n' +
+                        '                                <input class="cd-answer-checkbox" id="constructor-answer-checkbox1" type="checkbox"> </div>\n' +
+                        '                            <div class="cd-answer-text">\n' +
+                        '                                    <input type="text" name="text-answer" ' + 'value="' + $.trim($(this).text()) + '" placeholder="Ответ" required class="cd-answer-text-input">\n' +
+                        '                            </div>\n' +
+                        '                            <div class="cd-del-answer-icon-container">\n' +
+                        '                                <a href="#">\n' +
+                        '                                    <div class="cd-del-answer-icon div-is-icon"></div>\n' +
+                        '                                </a>\n' +
+                        '                            </div>\n' +
+                        '                        </div>'
+                    )
+                }
+            );
+        });
     </script>
     <script type="text/javascript">
         $(document).mouseup(function (e) {
@@ -103,8 +123,7 @@
                     <div class="cd-header-answer-right block-have-inline-block">Правильный(-ые)</div>
                     <div class="cd-header-add-answer block-have-inline-block">Добавить ответ</div>
                     <div class="cd-new-answer-icon div-is-icon"></div>
-                    @each('lk.teach.constructor.items.question-modal',session('test')->getQuestions(),'question')
-
+                    {{--@each('lk.teach.constructor.items.answer-modal',session('test')->getQuestions(),'question')--}}
                 </div>
                 <div class="cd-block-button cd-answers-block">
                     <button type="submit" class="cd-btn-save">Готово</button>
