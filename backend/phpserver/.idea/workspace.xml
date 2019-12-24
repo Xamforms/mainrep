@@ -2,11 +2,10 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="dac5f345-84a2-45e2-9c03-ba07a816afeb" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/public/studtest/assets/js/answers_modal.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/public/studtest/assets/html/constructor.html" beforeDir="false" afterPath="$PROJECT_DIR$/public/studtest/assets/html/constructor.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/resources/views/lk/teach/constructor/constructor.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/lk/teach/constructor/constructor.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/lk/teach/constructor/items/answer-modal.blade.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/lk/teach/constructor/items/question.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/lk/teach/constructor/items/question.blade.php" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -22,6 +21,13 @@
   </component>
   <component name="FavoritesManager">
     <favorites_list name="Studtest" />
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="JavaScript File" />
+      </list>
+    </option>
   </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/../.." />
@@ -261,7 +267,7 @@
       <workItem from="1576966642339" duration="107000" />
       <workItem from="1577000948741" duration="36579000" />
       <workItem from="1577079644533" duration="20891000" />
-      <workItem from="1577211420564" duration="8222000" />
+      <workItem from="1577211420564" duration="8757000" />
     </task>
     <task id="LOCAL-00001" summary="Медленное начало: просто добавил html Никиты">
       <created>1576966735099</created>
@@ -333,7 +339,14 @@
       <option name="project" value="LOCAL" />
       <updated>1577217430903</updated>
     </task>
-    <option name="localTasksCounter" value="11" />
+    <task id="LOCAL-00011" summary="Редактирован парсинг ответов из конструктора">
+      <created>1577220821061</created>
+      <option name="number" value="00011" />
+      <option name="presentableId" value="LOCAL-00011" />
+      <option name="project" value="LOCAL" />
+      <updated>1577220821061</updated>
+    </task>
+    <option name="localTasksCounter" value="12" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -364,7 +377,8 @@
     <MESSAGE value="Ведётся работа по создаанию конструктора" />
     <MESSAGE value="Добавлена первая функция контроллера конструктора и первичное заполнение конструктора создания вопроса" />
     <MESSAGE value="Добавил функцию парсинга ответов из редактируемого блока вопросов в модальное окно при помощи Javascript" />
-    <option name="LAST_COMMIT_MESSAGE" value="Добавил функцию парсинга ответов из редактируемого блока вопросов в модальное окно при помощи Javascript" />
+    <MESSAGE value="Редактирован парсинг ответов из конструктора" />
+    <option name="LAST_COMMIT_MESSAGE" value="Редактирован парсинг ответов из конструктора" />
   </component>
   <component name="com.intellij.coverage.CoverageDataManagerImpl">
     <SUITE FILE_PATH="coverage/Studtest@phpunit_xml.xml" NAME="phpunit.xml Coverage Results" MODIFIED="1572816101752" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="PhpCoverage" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" />
