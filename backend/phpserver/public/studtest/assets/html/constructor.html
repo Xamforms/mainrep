@@ -41,13 +41,14 @@
             });
         });
         $(function () {
-            $(".buttons-of-question").click(function (e) {
-                console.log(e);
-            });
-        });
-        $(function () {
-            $(".block-questions-buttons.main-nav").parents('div.block-questions.block-have-shadow.block-have-border').find('div.radio.form-input-question').find('label').each(function () {
-//   console.log($(this).text());
+
+            $(".buttons-of-question.button-edit-answer.popup-open-button-answers").click(function () {
+
+                $('body').find('div.cd-answers-modal').find('div.block-questions-text').append(
+                    $(this).parents('div.block-questions.block-have-shadow.block-have-border').find('div.block-questions-text').text()
+                );
+
+                $(this).parents('div.block-questions.block-have-shadow.block-have-border').find('div.radio.form-input-question').find('label').each(function () {
                     $('body').find('div.cd-answers-add.cd-answers-block').append(
                         '<div class="cd-answer-container  block-have-border block-have-shadow">\n' +
                         '                            <div class="cd-answer-check block-have-inline-block">\n' +
@@ -62,6 +63,7 @@
                         '                            </div>\n' +
                         '                        </div>'
                     )
+                });
                 }
             );
         });
@@ -117,7 +119,8 @@
             </div>
             <!-- cd-constructor-modal-container -->
         </div>
-        <!-- cd-constructor-modal -->
+
+        <!-- Модальное окно ответов -->
         <div class="cd-answers-modal">
             <!-- this is the entire modal form, including the background -->
             <div class="cd-answers-modal-container">
@@ -128,12 +131,13 @@
                     <!-- log in form -->
                     <div class="cd-answer-information cd-answers-block">
                         <div class="block-questions-header">Вопрос:</div>
-                        <div class="block-questions-text">Пример текста вопроса</div>
+                        <div class="block-questions-text"><!-- Текст вопроса модального окна --></div>
                     </div>
                     <div class="cd-answers-add cd-answers-block">
                         <div class="cd-header-answer-right block-have-inline-block">Правильный(-ые)</div>
                         <div class="cd-header-add-answer block-have-inline-block">Добавить ответ</div>
                         <div class="cd-new-answer-icon div-is-icon"></div>
+                        <!-- Блоки ответов модального окна -->
                     </div>
                     <div class="cd-block-button cd-answers-block">
                         <button type="submit" class="cd-btn-save">Готово</button>
@@ -143,7 +147,8 @@
             </div>
             <!-- cd-constructor-modal-container -->
         </div>
-        <!-- cd-constructor-modal -->
+        <!-- Модальное окно ответов -->
+
         <div class="header container">
             <div class="header-content">
                 <div class="header-content-logo"> <img src="images/logo.png" alt="логотип" class="logo"> </div>
@@ -244,19 +249,15 @@
                 <div class="block-questions block-have-shadow block-have-border">
                     <div class="block-questions-container">
                         <div class="block-questions-section-and-score block-questions-style">
-                            <div class="block-questions-section block-have-inline-block">
-                                <div class="block-questions-header">Раздел:</div>
-                                <div class="block-questions-text">Развитие промышленности в средневековье</div>
-                            </div>
                             <div class="block-questions-header block-questions-score block-have-inline-block">Балл: <span class="score-question">4</span></div>
                         </div>
                         <div class="block-questions-question block-questions-style">
                             <div class="block-questions-header">Вопрос:</div>
-                            <div class="block-questions-text">Очень хороший ответ на очень хороший вопрос от от очень хорошего преподавателя очень хорошим ученикам очень хорошего ВУЗа.</div>
+                            <div class="block-questions-text">Классный длинный вопрос</div>
                         </div>
                         <div class="block-questions-answer block-questions-style">
                             <div class="block-questions-header">Ответы:</div>
-                            <div class="block-questions-answer-container block-questions-text">
+                            <div class="block-questions-answer-container block-answers-text">
                                 <div class="radio form-input-question">
                                     <label>
                                         <input type="radio" name="standing" value="вар1">Вариант ответа 1</label>

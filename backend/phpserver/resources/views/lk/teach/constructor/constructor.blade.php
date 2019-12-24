@@ -40,22 +40,29 @@
             });
         });
         $(function () {
-            $(".block-questions-buttons.main-nav").parents('div.block-questions.block-have-shadow.block-have-border').find('div.radio.form-input-question').find('label').each(function () {
-//   console.log($(this).text());
-                    $('body').find('div.cd-answers-add.cd-answers-block').append(
-                        '<div class="cd-answer-container  block-have-border block-have-shadow">\n' +
-                        '                            <div class="cd-answer-check block-have-inline-block">\n' +
-                        '                                <input class="cd-answer-checkbox" id="constructor-answer-checkbox1" type="checkbox"> </div>\n' +
-                        '                            <div class="cd-answer-text">\n' +
-                        '                                    <input type="text" name="text-answer" ' + 'value="' + $.trim($(this).text()) + '" placeholder="Ответ" required class="cd-answer-text-input">\n' +
-                        '                            </div>\n' +
-                        '                            <div class="cd-del-answer-icon-container">\n' +
-                        '                                <a href="#">\n' +
-                        '                                    <div class="cd-del-answer-icon div-is-icon"></div>\n' +
-                        '                                </a>\n' +
-                        '                            </div>\n' +
-                        '                        </div>'
-                    )
+
+            $(".buttons-of-question.button-edit-answer.popup-open-button-answers").click(function () {
+
+                    $('body').find('div.cd-answers-modal').find('div.block-questions-text').append(
+                        $(this).parents('div.block-questions.block-have-shadow.block-have-border').find('div.block-questions-text').text()
+                    );
+
+                    $(this).parents('div.block-questions.block-have-shadow.block-have-border').find('div.radio.form-input-question').find('label').each(function () {
+                        $('body').find('div.cd-answers-add.cd-answers-block').append(
+                            '<div class="cd-answer-container  block-have-border block-have-shadow">\n' +
+                            '                            <div class="cd-answer-check block-have-inline-block">\n' +
+                            '                                <input class="cd-answer-checkbox" id="constructor-answer-checkbox1" type="checkbox"> </div>\n' +
+                            '                            <div class="cd-answer-text">\n' +
+                            '                                    <input type="text" name="text-answer" ' + 'value="' + $.trim($(this).text()) + '" placeholder="Ответ" required class="cd-answer-text-input">\n' +
+                            '                            </div>\n' +
+                            '                            <div class="cd-del-answer-icon-container">\n' +
+                            '                                <a href="#">\n' +
+                            '                                    <div class="cd-del-answer-icon div-is-icon"></div>\n' +
+                            '                                </a>\n' +
+                            '                            </div>\n' +
+                            '                        </div>'
+                        )
+                    });
                 }
             );
         });
@@ -105,7 +112,7 @@
     </div>
 
 
-    <!-- cd-constructor-modal -->
+    <!-- Модальное окно ответов -->
     <div class="cd-answers-modal">
         <!-- this is the entire modal form, including the background -->
         <div class="cd-answers-modal-container">
@@ -116,14 +123,14 @@
                 <!-- log in form -->
                 <div class="cd-answer-information cd-answers-block">
                     <div class="block-questions-header">Вопрос:</div>
-                    <div class="block-questions-text">Пример текста вопроса</div>
+                    <div class="block-questions-text"><!-- Текст вопросов в модальном окне --></div>
                 </div>
                 <div class="cd-answers-add cd-answers-block">
 
                     <div class="cd-header-answer-right block-have-inline-block">Правильный(-ые)</div>
                     <div class="cd-header-add-answer block-have-inline-block">Добавить ответ</div>
                     <div class="cd-new-answer-icon div-is-icon"></div>
-                    {{--@each('lk.teach.constructor.items.answer-modal',session('test')->getQuestions(),'question')--}}
+                    <!-- Текст ответов в модальном окне -->
                 </div>
                 <div class="cd-block-button cd-answers-block">
                     <button type="submit" class="cd-btn-save">Готово</button>
@@ -133,7 +140,7 @@
         </div>
         <!-- cd-constructor-modal-container -->
     </div>
-    <!-- cd-constructor-modal -->
+    <!-- Модальное окно ответов -->
 
 
     @include('common.header')

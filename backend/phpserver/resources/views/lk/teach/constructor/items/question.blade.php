@@ -9,7 +9,7 @@
         </div>
         <div class="block-questions-answer block-questions-style">
             <div class="block-questions-header">Ответы:</div>
-            <div class="block-questions-answer-container block-questions-text">
+            <div class="block-questions-answer-container block-answers-text">
                 <div class="radio form-input-question">
                     @foreach($question->getAnswers() as $answer)
                         <label><input type="radio" name="standing" value="{{$loop->index}}" {{$answer->getType()? "checked":""}}>{{$answer->getName()}}</label>
