@@ -25,16 +25,6 @@ class ConstructorController extends Controller
         return view('lk.teach.constructor.constructor');
     }
 
-    function createTest (Request $request)
-    {
-
-    }
-
-    function editTest (Request $request)
-    {
-
-    }
-
     function addQuestion (Request $request)
     {
 

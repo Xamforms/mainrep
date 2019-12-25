@@ -36,9 +36,15 @@ Route::post('/home/login', 'Studtest\Auth\LoginController@submitlogform');
 
 Route::get('/lk/constructor', 'Studtest\ConstructorController@showConstructor');
 
-Route::post('/lk/constructor/createtest', 'Studtest\ConstructorController@edittest');
+Route::post('/lk/constructor/addquestion', 'Studtest\ConstructorController@addQuestion');
 
-Route::post('/lk/constructor/testedit', 'Studtest\ConstructorController@edittest');
+Route::post('/lk/constructor/deletequestion', 'Studtest\ConstructorController@deleteQuestion');
+
+Route::post('/lk/constructor/editquestion', 'Studtest\ConstructorController@editQuestion');
+
+Route::post('/lk/constructor/editquestion/addanswers', 'Studtest\ConstructorController@addAnswers');
+
+Route::post('/lk/constructor/editquestion/setanswers', 'Studtest\ConstructorController@setAnswers');
 
 Route::post('/lk/starttest', 'Studtest\TestingController@showgreeting');
 

@@ -1,5 +1,5 @@
 <div class="block-questions block-have-shadow block-have-border">
-    <div class="block-questions-container" id="{{$loop->index}}">
+    <div class="block-questions-container">
         <div class="block-questions-section-and-score block-questions-style">
             <div class="block-questions-header block-questions-score block-have-inline-block">Балл: <span class="score-question">{{$question->getQuality()}}</span></div>
         </div>
@@ -22,8 +22,10 @@
         </div> ---></div>
     </div>
     <div class="block-questions-buttons main-nav">
-        <button type="submit" class="buttons-of-question button-delete-question">Удалить</button>
-        <button type="submit" class="buttons-of-question button-edit-question popup-open-button-new-question">Редактировать вопрос</button>
-        <button type="submit" class="buttons-of-question button-edit-answer popup-open-button-answers">Редактировать ответы</button>
+        <form action="/constructor/deleteQuestion">
+        <button type="submit" class="buttons-of-question button-delete-question" value="{{$loop->index}}">Удалить</button>
+        </form>
+        <button type="submit" class="buttons-of-question button-edit-question popup-open-button-new-question" value="{{$loop->index}}">Редактировать вопрос</button>
+        <button type="submit" class="buttons-of-question button-edit-answer popup-open-button-answers" value="{{$loop->index}}">Редактировать ответы</button>
     </div>
 </div>

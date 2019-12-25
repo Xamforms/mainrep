@@ -72,7 +72,7 @@
                 <!-- log in form -->
                 <div class="cd-answer-information cd-answers-block">
                     <div class="block-questions-header">Вопрос:</div>
-                    <div class="block-questions-text"><!-- Текст вопросов в модальном окне --></div>
+                    <!-- Текст вопросов в модальном окне -->
                 </div>
                 <div class="cd-answers-add cd-answers-block">
 
