@@ -56,9 +56,9 @@ jQuery(document).ready(function ($) {
     });
 
     //unknown error
-    formModal.on('click',function (event) {
-        if ($(event.target).is('#cd-question') || $(event.target).is('.cd-close-answer')) {
-            formAnswers.removeClass('is-visible');
+    formModal.on('click', function (event) {
+        if ($(event.target).is(formModal) || $(event.target).is('.cd-btn-save')) {
+            formModal.removeClass('is-visible');
         }
     });
     //close modal when clicking the esc keyboard button

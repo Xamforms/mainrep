@@ -1,10 +1,11 @@
 <?php
 
-namespace App\Http\Controllers;
+namespace App\Http\Controllers\Studtest;
+include 'E:\Projects\GIT\mainrep\backend\phpserver\resources\php\test.php';
 
 use Illuminate\Http\Request;
-use SomeTest, Question;
-
+use App\Http\Controllers\Controller;
+use SomeTest;
 class ConstructorController extends Controller
 {
     function showConstructor (Request $request)
@@ -12,10 +13,11 @@ class ConstructorController extends Controller
         $constructormode = $this->validate($request,[
             'constructor'=>'required|in:edit,create'
         ]);
-        if ($constructormode=='create')
+        if ($constructormode["constructor"]=='create')
         {
             session([
-                'test'=> SomeTest::create()
+                'test'=>
+                    SomeTest::create()
             ]);
         }
         else
@@ -55,3 +57,4 @@ class ConstructorController extends Controller
 
     }
 }
+?>

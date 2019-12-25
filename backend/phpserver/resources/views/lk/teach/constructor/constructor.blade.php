@@ -2,7 +2,7 @@
 <html lang="en">
 
 <head>
-    <base href="../">
+    <base href="../studtest/assets/">
     <meta charset="UTF-8">
     <link rel="stylesheet" href="css/style.css">
     <title>Конструктор</title>
@@ -90,7 +90,7 @@
                     <!-- Текст ответов в модальном окне -->
                 </div>
                 <div class="cd-block-button cd-answers-block">
-                    <button type="submit" class="cd-btn-save cd-close-answer" name="questionIndex">Готово</button>
+                    <button type="submit" class="cd-btn-save" name="questionIndex">Готово</button>
                 </div>
                 </form>
             </div>
@@ -160,7 +160,41 @@
             <div class="buttons-new-question main-nav">
                 <button class="button-new-question popup-open-button-new-question">Добавить вопрос</button>
             </div>
-            @each('lk.teach.constructor.items.question',session('test')->getQuestions(), 'question')
+            {{--ГЕНЕРАЦИЯ ВОПРОСА--}}
+            @foreach(session('test')->getQuestions() as $question)
+                <div class="block-questions block-have-shadow block-have-border">
+                    <div class="block-questions-container">
+                        <div class="block-questions-section-and-score block-questions-style">
+                            <div class="block-questions-header block-questions-score block-have-inline-block">Балл: <span class="score-question">{{$question->getQuality()}}</span></div>
+                        </div>
+                        <div class="block-questions-question block-questions-style">
+                            <div class="block-questions-header">Вопрос:</div>
+                            <div class="block-questions-text">{{$question->getName()}}</div>
+                        </div>
+                        <div class="block-questions-answer block-questions-style">
+                            <div class="block-questions-header">Ответы:</div>
+                            <div class="block-questions-answer-container block-answers-text">
+                                <div class="radio form-input-question">
+                                    @foreach($question->getAnswers() as $answer)
+                                        <label><input type="radio" name="standing" value="{{$loop->index}}" {{$answer->isType()? "checked":""}}>{{$answer->getName()}}</label>
+                                    @endforeach
+                                </div>
+                            </div>
+                            <!--- <div class="block-questions-files">
+                            <div class="block-questions-header">Прикреплённые файлы: </div>
+                            <div class="block-questions-files-container"> </div>
+                        </div> ---></div>
+                    </div>
+                    <div class="block-questions-buttons main-nav">
+                        <form action="/lk/constructor/deletequestion" method="POST">
+                            <button type="submit" class="buttons-of-question button-delete-question" value="{{$loop->index}}">Удалить</button>
+                        </form>
+                        <button type="submit" class="buttons-of-question button-edit-question popup-open-button-new-question" value="{{$loop->index}}">Редактировать вопрос</button>
+                        <button type="submit" class="buttons-of-question button-edit-answer popup-open-button-answers" value="{{$loop->index}}">Редактировать ответы</button>
+                    </div>
+                </div>
+            @endforeach
+            {{--ГЕНЕРАЦИЯ ВОПРОСА--}}
         </div>
     </div>
     @include('common.footer')

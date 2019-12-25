@@ -2,7 +2,7 @@
 <html lang="en">
 
 <head>
-    <base href="../">
+    <base href="studtest/assets/">
     <meta charset="UTF-8">
     <link rel="stylesheet" href="css/style.css">
     <title>Тест</title>
