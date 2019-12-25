@@ -29,6 +29,9 @@
 
 <body>
 <div class="body">
+
+
+    <!-- Модальное окно вопросов -->
     <div class="cd-constructor-modal">
         <!-- this is the entire modal form, including the background -->
         <div class="cd-constructor-modal-container">
@@ -37,7 +40,7 @@
                 <h3 class="cd-header">Вопрос</h3> </div>
             <div id="cd-question">
                 <!-- log in form -->
-                <form class="cd-form">
+                <form class="cd-form" method="POST" action="/lk/constructor/editquestion">
                     <p class="fieldset">
                         <label class="cd-label" for="question-score">Количество баллов</label>
                         <input class="full-width has-padding has-border" id="number-of-score" type="text" placeholder="По умолчанию 1 балл" name="question-score"> <span class="cd-error-message">Ошибка!</span> </p>
@@ -46,20 +49,22 @@
                         <textarea class="question-textarea" placeholder="Введите Ваш вопрос" name="text-question"></textarea>
                     </p>
                     <div class="del-question block-have-inline-block">
-                        <p class="fieldset"> <a href="#" class="delete-link param-link-action">Удалить</a> </p>
+                        <p class="fieldset"> <a href="/lk/constructor/deletequestion" class="delete-link param-link-action">Удалить</a> </p>
                     </div>
                     <div class="block-add-answers block-have-inline-block main-nav">
                         <p class="fieldset">
-                        <div class="button button-add-answers popup-open-button-answers">Добавить ответы</div>
+                        <button type="submit" class="button button-add-answers popup-open-button-answers" name="questionIndex">Добавить ответы</button>
                         </p>
                         <p class="text-form">Поля, помеченные символом "<span class="mark">*</span>", обязательны к заполнению</p>
                     </div>
                 </form>
             </div>
+            </div>
             <!-- cd-constructor -->
         </div>
         <!-- cd-constructor-modal-container -->
-    </div>
+    <!-- Модальное окно вопросов -->
+
 
     <!-- Модальное окно ответов -->
     <div class="cd-answers-modal">
@@ -69,7 +74,8 @@
             <div class="cd-switcher">
                 <h3 class="cd-header">Ответы</h3> </div>
             <div id="cd-answers" class="cd-answers">
-                <!-- log in form -->
+                <form method="POST" action="/lk/constructor/editquestion/setanswers">
+                <!-- answer form -->
                 <div class="cd-answer-information cd-answers-block">
                     <div class="block-questions-header">Вопрос:</div>
                     <!-- Текст вопросов в модальном окне -->
@@ -82,14 +88,16 @@
                     <!-- Текст ответов в модальном окне -->
                 </div>
                 <div class="cd-block-button cd-answers-block">
-                    <button type="submit" class="cd-btn-save">Готово</button>
+                    <button type="submit" class="cd-btn-save" name="questionIndex">Готово</button>
                 </div>
+                </form>
             </div>
             <!-- cd-constructor -->
         </div>
         <!-- cd-constructor-modal-container -->
     </div>
     <!-- Модальное окно ответов -->
+
 
     @include('common.header')
     <div class="content-body container">

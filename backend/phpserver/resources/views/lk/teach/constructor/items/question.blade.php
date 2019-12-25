@@ -22,7 +22,7 @@
         </div> ---></div>
     </div>
     <div class="block-questions-buttons main-nav">
-        <form action="/constructor/deleteQuestion">
+        <form action="/lk/constructor/deleteQuestion" method="POST">
         <button type="submit" class="buttons-of-question button-delete-question" value="{{$loop->index}}">Удалить</button>
         </form>
         <button type="submit" class="buttons-of-question button-edit-question popup-open-button-new-question" value="{{$loop->index}}">Редактировать вопрос</button>
