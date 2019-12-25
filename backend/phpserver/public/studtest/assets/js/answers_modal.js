@@ -1,5 +1,5 @@
 $(function () {
-    $(".cd-new-answer-icon").click(function (e) {
+    $(".cd-new-answer-icon").click(function () {
         $('.cd-answers-add').append('\n' +
             '                    <div class="cd-answer-container  block-have-border block-have-shadow">\n' +
             '                        <div class="cd-answer-check block-have-inline-block">\n' +
@@ -8,11 +8,13 @@ $(function () {
             '                                <input type="text" name="text-answer" placeholder="Ответ" required class="cd-answer-text-input">\n' +
             '                        </div>\n' +
             '                        <div class="cd-del-answer-icon-container">\n' +
-            '                            <a href="#">\n' +
             '                                <div class="cd-del-answer-icon div-is-icon"></div>\n' +
-            '                            </a>\n' +
             '                        </div>\n' +
             '                    </div>');
+    });
+
+    $(".cd-del-answer-icon").click(function () {
+        $(this).parents('div.cd-answer-container.block-have-border.block-have-shadow').remove();
     });
 });
 $(function () {
@@ -30,13 +32,15 @@ $(function () {
                     '                                    <input type="text" name="text-answer" ' + 'value="' + $.trim($(this).text()) + '" placeholder="Ответ" required class="cd-answer-text-input">\n' +
                     '                            </div>\n' +
                     '                            <div class="cd-del-answer-icon-container">\n' +
-                    '                                <a href="#">\n' +
                     '                                    <div class="cd-del-answer-icon div-is-icon"></div>\n' +
-                    '                                </a>\n' +
                     '                            </div>\n' +
                     '                        </div>'
                 )
             });
+
+        $(".cd-del-answer-icon").click(function () {
+            $(this).parents('div.cd-answer-container.block-have-border.block-have-shadow').remove();
+        });
         }
     );
 });

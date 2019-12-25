@@ -39,7 +39,7 @@
                 <!-- log in form -->
                 <form class="cd-form">
                     <p class="fieldset">
-                        <label class="cd-label" for="question-score">Колличество баллов</label>
+                        <label class="cd-label" for="question-score">Количество баллов</label>
                         <input class="full-width has-padding has-border" id="number-of-score" type="text" placeholder="По умолчанию 1 балл" name="question-score"> <span class="cd-error-message">Ошибка!</span> </p>
                     <p class="fieldset">
                         <label class="cd-label" for="text-question">Введите вопрос <span class="mark">*</span></label>
