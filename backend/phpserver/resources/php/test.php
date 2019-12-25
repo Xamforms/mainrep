@@ -96,9 +96,7 @@ class Question
         $instance = new self();
         $instance->answers = [
             Answer::create("Добавьте ответ 1",false),
-            Answer::create("Добавьте ответ 2",false),
-            Answer::create("Добавьте ответ 3",true),
-            Answer::create("Добавьте ответ 1",false)
+            Answer::create("Добавьте ответ 2",true)
         ];
         return $instance;
     }

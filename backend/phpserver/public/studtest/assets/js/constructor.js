@@ -13,6 +13,12 @@ jQuery(document).ready(function ($) {
             formModal.removeClass('is-visible');
         }
     });
+    //ok modal
+    formModal.on('click', function (event) {
+        if ($(event.target).is(formModal) || $(event.target).is('.cd-close-question')) {
+            formModal.removeClass('is-visible');
+        }
+    });
     //close modal when clicking the esc keyboard button
     $(document).keyup(function (event) {
         if (event.which == '27') {
@@ -20,6 +26,7 @@ jQuery(document).ready(function ($) {
         }
     });
 
+    //тут почему-то происходит открытие окна добавления вопроса
     function question_selected() {
         mainNav.removeClass('is-visible');
         formModal.addClass('is-visible');
@@ -45,6 +52,13 @@ jQuery(document).ready(function ($) {
     formModal.on('click', function (event) {
         if ($(event.target).is(formModal) || $(event.target).is('.cd-close-form')) {
             formModal.removeClass('is-visible');
+        }
+    });
+
+    //unknown error
+    formModal.on('click',function (event) {
+        if ($(event.target).is('#cd-question') || $(event.target).is('.cd-close-answer')) {
+            formAnswers.removeClass('is-visible');
         }
     });
     //close modal when clicking the esc keyboard button

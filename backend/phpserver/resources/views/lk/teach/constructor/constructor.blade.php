@@ -18,6 +18,8 @@
                 $('.popup-lk').slideToggle(500);
             });
         });
+        //Открытие второго окна добавления вопроса
+        //Стек контейнеров
         $(document).mouseup(function (e) {
             var container = $(".popup-lk");
             if (container.has(e.target).length === 0) {
@@ -49,11 +51,11 @@
                         <textarea class="question-textarea" placeholder="Введите Ваш вопрос" name="text-question"></textarea>
                     </p>
                     <div class="del-question block-have-inline-block">
-                        <p class="fieldset"> <a href="/lk/constructor/deletequestion" class="delete-link param-link-action">Удалить</a> </p>
+                        <p class="fieldset"> <input href="/lk/constructor" class="delete-link param-link-action" name="Отмена"> </p>
                     </div>
                     <div class="block-add-answers block-have-inline-block main-nav">
                         <p class="fieldset">
-                        <button type="submit" class="button button-add-answers popup-open-button-answers" name="questionIndex">Добавить ответы</button>
+                        <button type="submit" class="button button-add-answers cd-close-question" name="questionIndex">Готово</button>
                         </p>
                         <p class="text-form">Поля, помеченные символом "<span class="mark">*</span>", обязательны к заполнению</p>
                     </div>
@@ -88,7 +90,7 @@
                     <!-- Текст ответов в модальном окне -->
                 </div>
                 <div class="cd-block-button cd-answers-block">
-                    <button type="submit" class="cd-btn-save" name="questionIndex">Готово</button>
+                    <button type="submit" class="cd-btn-save cd-close-answer" name="questionIndex">Готово</button>
                 </div>
                 </form>
             </div>
@@ -115,7 +117,9 @@
             </div>
             <div class="top-block-constructor-buttons block-have-inline-block">
                 <button type="submit" class="button-download-PDF constructor-buttons">Скачать тест в PDF</button>
+                <form method="post" action="lk/constructor/sendtest">
                 <button type="submit" class="button-save-exit-test constructor-buttons">Сохранить и выйти</button>
+                </form>
             </div>
         </div>
         <div class="left-block-constructor block">

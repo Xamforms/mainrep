@@ -1,8 +1,8 @@
 $(function () {
     $(".cd-new-answer-icon").click(function () {
         $('.cd-answers-add').append(writeQuestion(''));
+        bindAnswerDelete();
     });
-    bindDelete()
 });
 $(function () {
     $(".buttons-of-question.button-edit-answer.popup-open-button-answers").click(function () {
@@ -14,9 +14,28 @@ $(function () {
             $(this).parents('div.block-questions.block-have-shadow.block-have-border').find('div.radio.form-input-question').find('label').each(function () {
                 $('.cd-answers-add.cd-answers-block').append(writeQuestion($.trim($(this).text())));
             });
-        bindDelete()
+        bindAnswerDelete();
         }
     );
+});
+$(function () {
+    /*редактирование ответов*/
+    $(".buttons-of-question.button-edit-answer.popup-open-button-answers").click(function () {
+        $('.cd-btn-save').val($(this).val());
+    });
+    /*редактирование вопроса*/
+    $(".buttons-of-question.button-edit-question.popup-open-button-new-question").click(function () {
+        $('.button.button-add-answers.popup-open-button-answers').val($(this).val());
+        var $deletelink = $('.delete-link.param-link-action');
+        $deletelink.text("Удалить");
+        $deletelink.prop("href", "/lk/constructor/deletequestion");
+    });
+    /*добавление вопроса*/
+    $(".button-new-question.popup-open-button-new-question").click(function () {
+        var $deletelink = $('.delete-link.param-link-action');
+        $deletelink.text("Отмена");
+        $deletelink.prop("href", "/lk/constructor");
+    });
 });
 
 function writeQuestion(questiontext){
@@ -32,7 +51,7 @@ function writeQuestion(questiontext){
         '                        </div>';
 }
 
-function bindDelete (){
+function bindAnswerDelete (){
     $(".cd-del-answer-icon").click(function () {
         $(this).parents('div.cd-answer-container.block-have-border.block-have-shadow').remove();
     });

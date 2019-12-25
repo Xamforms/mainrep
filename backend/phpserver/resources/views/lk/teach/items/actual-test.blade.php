@@ -28,8 +28,8 @@
             </div>
         </div>
         <div class="test-information-content-edit block-have-inline-block">
-            <form action="/constructor" method="GET" >
-                <div class="test-information-content-edit-pic" name="constructor" value="edit"></div>
+            <form action="/lk/constructor" method="GET" >
+                <button class="test-information-content-edit-pic" name="constructor" value="edit" id=""></button>
             </form>
         </div>
     </div>

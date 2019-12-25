@@ -46,6 +46,8 @@ Route::post('/lk/constructor/editquestion/addanswers', 'Studtest\ConstructorCont
 
 Route::post('/lk/constructor/editquestion/setanswers', 'Studtest\ConstructorController@setAnswers');
 
+Route::post('/lk/constructor/sendtest', 'Studtest\ConstructorController@sendTest');
+
 Route::post('/lk/starttest', 'Studtest\TestingController@showgreeting');
 
 Route::post('/lk/starttest/testing', 'Studtest\TestingController@showtestquestion');
