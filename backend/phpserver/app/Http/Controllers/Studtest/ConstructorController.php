@@ -1,7 +1,7 @@
 <?php
 
 namespace App\Http\Controllers\Studtest;
-include 'E:\Projects\GIT\mainrep\backend\phpserver\resources\php\test.php';
+include 'C:\Users\ymnya\PhpstormProjects\mainrep\backend\phpserver\resources\php\test.php';
 
 use GuzzleHttp\Client;
 use Illuminate\Http\Request;
@@ -32,7 +32,10 @@ class ConstructorController extends Controller
             'question-text' => 'required|alpha_num'
         ]);
         session('test')->addQuestion($validatedquestion['question-text'], $validatedquestion['question-score']);
-        return view('lk.teach.constructor.constructor');
+        try {
+            return view('lk.teach.constructor.constructor')->render();
+        } catch (\Throwable $e) {
+        }
     }
 
     function deleteQuestion(Request $request)
@@ -41,7 +44,10 @@ class ConstructorController extends Controller
             'question-text' => 'required|alpha_num'
         ]);
         session('test')->removeQuestion($validatedquestion['question-text']);
-        return view('lk.teach.constructor.constructor');
+        try {
+            return view('lk.teach.constructor.constructor')->render();
+        } catch (\Throwable $e) {
+        }
     }
 
     function editQuestion(Request $request)
@@ -52,7 +58,10 @@ class ConstructorController extends Controller
             'new-question-text' => 'required|alpha_num'
         ]);
         session('test')->setQuestion($validatedquestion['old-question-text'],$validatedquestion['new-question-text'], $validatedquestion['question-score']);
-        return view('lk.teach.constructor.constructor');
+        try {
+            return view('lk.teach.constructor.constructor')->render();
+        } catch (\Throwable $e) {
+        }
     }
 
     function setAnswers (Request $request)

@@ -1,0 +1,32 @@
+*   Trying ::1:8081...
+* TCP_NODELAY set
+* Connected to localhost (::1) port 8081 (#0)
+> POST /checkreg HTTP/1.1
+Host: localhost:8081
+Content-Length: 0
+Content-Type: application/json
+User-Agent: GuzzleHttp/6.5.1 curl/7.67.0 PHP/7.2.26
+body: {"email":"ymnyaga@yandex.ru","surname":"\u0427\u0435\u043a\u0430\u043d\u043e\u0432\u043a\u0438\u043d","name":"Name","patronymic":null,"role":"student","password":"12345678"}
+
+* Mark bundle as not supporting multiuse
+< HTTP/1.1 200 
+< Transfer-Encoding: chunked
+< Date: Thu, 26 Dec 2019 08:12:03 GMT
+< 
+* Connection #0 to host localhost left intact
+*   Trying ::1:8081...
+* TCP_NODELAY set
+* Connected to localhost (::1) port 8081 (#0)
+> POST /checkreg HTTP/1.1
+Host: localhost:8081
+Content-Length: 0
+Content-Type: application/json
+User-Agent: GuzzleHttp/6.5.1 curl/7.67.0 PHP/7.2.26
+body: {"email":"chekanovkin.a.e@edu.mirea.ru","surname":"\u041c\u0430\u0442\u0447\u0438\u043d","name":"\u0412\u0430\u0441\u0438\u043b\u0438\u0439","patronymic":null,"role":"teacher","password":"11111111"}
+
+* Mark bundle as not supporting multiuse
+< HTTP/1.1 200 
+< Transfer-Encoding: chunked
+< Date: Thu, 26 Dec 2019 08:58:34 GMT
+< 
+* Connection #0 to host localhost left intact

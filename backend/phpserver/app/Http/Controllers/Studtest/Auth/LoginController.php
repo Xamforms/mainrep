@@ -59,7 +59,7 @@ class LoginController extends Controller
                 return back()->withInput();
             }
         } catch (Exception\GuzzleException $e) {
-            echo file_get_contents($_SERVER['DOCUMENT_ROOT'] . "/request.log");
+            echo file_get_contents($_SERVER['DOCUMENT_ROOT'] . "\\logrequest.log");
             echo $e->getMessage();
             echo $e->getPrevious();
             echo $e->getCode();

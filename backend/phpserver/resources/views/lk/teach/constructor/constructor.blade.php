@@ -46,7 +46,7 @@
                     @csrf
                     <p class="fieldset">
                         <label class="cd-label" for="number-of-score">Количество баллов</label>
-                        <input class="full-width has-padding has-border" id="number-of-score" name="question-score" type="text" placeholder="По умолчанию 1 балл" > <span class="cd-error-message">Ошибка!</span> </p>
+                        <input class="full-width has-padding has-border" id="number-of-score" name="question-score" type="text" placeholder="По умолчанию 1 балл" >
                     <p class="fieldset">
                         <label class="cd-label" for="question-textarea">Введите вопрос <span class="mark">*</span></label>
                         <textarea class="question-textarea" id="question-textarea" placeholder="Введите Ваш вопрос" name="question-text"></textarea>
