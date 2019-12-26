@@ -72,9 +72,9 @@ class SomeTest
         $this->questions = $questions;
     }
 
-    public function addQuestion(string $name, $question):void
+    public function addQuestion(string $questionname, $quality):void
     {
-        $this->questions[$name]=$question;
+        array_push($this->questions,Question::edit($questionname,$quality,[Answer::create("Добавьте ответ 1",false),Answer::create("Добавьте ответ 2",true)]));
     }
 
     public function removeQuestion($questionname)

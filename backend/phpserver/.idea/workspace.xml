@@ -4,12 +4,10 @@
     <list default="true" id="dac5f345-84a2-45e2-9c03-ba07a816afeb" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/Http/Controllers/Studtest/ConstructorController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/Studtest/ConstructorController.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/Studtest/TestingController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/Studtest/TestingController.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/public/studtest/assets/css/style.css" beforeDir="false" afterPath="$PROJECT_DIR$/public/studtest/assets/css/style.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/studtest/assets/html/constructor.html" beforeDir="false" afterPath="$PROJECT_DIR$/public/studtest/assets/html/constructor.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/studtest/assets/js/constructor.js" beforeDir="false" afterPath="$PROJECT_DIR$/public/studtest/assets/js/constructor.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/studtest/assets/js/answers_modal.js" beforeDir="false" afterPath="$PROJECT_DIR$/public/studtest/assets/js/answers_modal.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/php/test.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/php/test.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/resources/views/lk/teach/constructor/constructor.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/lk/teach/constructor/constructor.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/lk/teach/constructor/items/question.blade.php" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/resources/views/test/test-greeting.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/test/test-greeting.blade.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/resources/views/test/test-result.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/test/test-result.blade.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/resources/views/test/test.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/test/test.blade.php" afterDir="false" />
@@ -278,7 +276,7 @@
       <workItem from="1577079644533" duration="20891000" />
       <workItem from="1577211420564" duration="9327000" />
       <workItem from="1577272793689" duration="28561000" />
-      <workItem from="1577310059063" duration="6812000" />
+      <workItem from="1577310059063" duration="11405000" />
     </task>
     <task id="LOCAL-00001" summary="Медленное начало: просто добавил html Никиты">
       <created>1576966735099</created>
@@ -392,7 +390,14 @@
       <option name="project" value="LOCAL" />
       <updated>1577309608650</updated>
     </task>
-    <option name="localTasksCounter" value="17" />
+    <task id="LOCAL-00017" summary="Произведён тестовый запуск страницы конструктора">
+      <created>1577316954012</created>
+      <option name="number" value="00017" />
+      <option name="presentableId" value="LOCAL-00017" />
+      <option name="project" value="LOCAL" />
+      <updated>1577316954012</updated>
+    </task>
+    <option name="localTasksCounter" value="18" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -430,7 +435,19 @@
     <MESSAGE value="Javascript решена проблема дублирования текстовых значений" />
     <MESSAGE value="Добавлена передача id вопроса в модальное окно, текущая проблема - связь между модальными окнами добавления вопроса и изменения ответов, отправка данных на сервер" />
     <MESSAGE value="Изменения парсинга интерфейса" />
-    <option name="LAST_COMMIT_MESSAGE" value="Изменения парсинга интерфейса" />
+    <MESSAGE value="Произведён тестовый запуск страницы конструктора" />
+    <option name="LAST_COMMIT_MESSAGE" value="Произведён тестовый запуск страницы конструктора" />
+  </component>
+  <component name="XDebuggerManager">
+    <breakpoint-manager>
+      <breakpoints>
+        <line-breakpoint enabled="true" type="php">
+          <url>file://$PROJECT_DIR$/app/Http/Controllers/Studtest/ConstructorController.php</url>
+          <line>36</line>
+          <option name="timeStamp" value="15" />
+        </line-breakpoint>
+      </breakpoints>
+    </breakpoint-manager>
   </component>
   <component name="com.intellij.coverage.CoverageDataManagerImpl">
     <SUITE FILE_PATH="coverage/Studtest@phpunit_xml.xml" NAME="phpunit.xml Coverage Results" MODIFIED="1572816101752" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="PhpCoverage" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" />

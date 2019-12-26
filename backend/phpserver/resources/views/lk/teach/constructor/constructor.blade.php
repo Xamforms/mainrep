@@ -42,16 +42,17 @@
                 <h3 class="cd-header">Вопрос</h3> </div>
             <div id="cd-question">
                 <!-- log in form -->
-                <form class="cd-form" method="POST" action="/lk/constructor/editquestion">
+                <form class="questions-form" method="POST" action="/lk/constructor/editquestion">
+                    @csrf
                     <p class="fieldset">
-                        <label class="cd-label" for="question-score">Количество баллов</label>
-                        <input class="full-width has-padding has-border" id="number-of-score" type="text" placeholder="По умолчанию 1 балл" name="question-score"> <span class="cd-error-message">Ошибка!</span> </p>
+                        <label class="cd-label" for="number-of-score">Количество баллов</label>
+                        <input class="full-width has-padding has-border" id="number-of-score" name="question-score" type="text" placeholder="По умолчанию 1 балл" > <span class="cd-error-message">Ошибка!</span> </p>
                     <p class="fieldset">
-                        <label class="cd-label" for="text-question">Введите вопрос <span class="mark">*</span></label>
-                        <textarea class="question-textarea" placeholder="Введите Ваш вопрос" name="text-question"></textarea>
+                        <label class="cd-label" for="question-textarea">Введите вопрос <span class="mark">*</span></label>
+                        <textarea class="question-textarea" id="question-textarea" placeholder="Введите Ваш вопрос" name="question-text"></textarea>
                     </p>
                     <div class="del-question block-have-inline-block">
-                        <p class="fieldset"> <input href="/lk/constructor" class="delete-link param-link-action" name="Отмена"> </p>
+                        <p class="fieldset"> <a href="/lk/constructor" class="delete-link param-link-action">Отмена</a> </p>
                     </div>
                     <div class="block-add-answers block-have-inline-block main-nav">
                         <p class="fieldset">
@@ -130,6 +131,7 @@
                     <div class="param-header">
                         <h4 class="param-header-h4">Параметры</h4></div>
                 </div>
+                <a href="#"></a>
                 </p>
                 <div class="param-information">
                     <form action="#" method="post">

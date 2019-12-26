@@ -29,7 +29,12 @@ class ConstructorController extends Controller
 
     function addQuestion (Request $request)
     {
-
+$valuatedquestion = $this->validate($request,[
+    'question-score'=>'numeric',
+    'question-text' => 'required|alpha_num'
+]);
+session('test')->addQuestion($valuatedquestion['question-text'],$valuatedquestion['question-score']);
+return view('lk.teach.constructor.constructor');
     }
 
     function deleteQuestion (Request $request)

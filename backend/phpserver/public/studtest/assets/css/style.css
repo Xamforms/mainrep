@@ -1367,13 +1367,13 @@ input.section-qeustions-name-input:focus {
 }
 
 .block-questions-buttons {
-    width: 70%;
+    width: 30%;
     margin: 3% 5%;
 }
 
 .buttons-of-question {
-    display: inline-block;
-    width: 60%;
+    display: inline;
+    width: 70%;
     padding: 7px;
 }
 

@@ -29,12 +29,14 @@ $(function () {
         var $deletelink = $('.delete-link.param-link-action');
         $deletelink.text("Удалить");
         $deletelink.prop("href", "/lk/constructor/deletequestion");
+        $('.questions-form').prop("action","/lk/constructor/editquestion");
     });
     /*добавление вопроса*/
     $(".button-new-question.popup-open-button-new-question").click(function () {
         var $deletelink = $('.delete-link.param-link-action');
         $deletelink.text("Отмена");
-        $deletelink.prop("href", "/lk/constructor");
+        $deletelink.prop("href", "/lk/constructor#");
+        $('.questions-form').prop("action","/lk/constructor/addquestion");
     });
 });
 
