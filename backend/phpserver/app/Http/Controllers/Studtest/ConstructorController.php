@@ -20,7 +20,7 @@ class ConstructorController extends Controller
         }
         else
         {
-
+//иначе в качестве теста установить выбранный
         }
         return view('lk.teach.constructor.constructor');
     }
@@ -46,10 +46,16 @@ class ConstructorController extends Controller
 
     function editQuestion(Request $request)
     {
-
+        $validatedquestion = $this->validate($request, [
+            'question-score' => 'numeric',
+            'old-question-text' => 'required|alpha_num',
+            'new-question-text' => 'required|alpha_num'
+        ]);
+        session('test')->setQuestion($validatedquestion['old-question-text'],$validatedquestion['new-question-text'], $validatedquestion['question-score']);
+        return view('lk.teach.constructor.constructor');
     }
 
-    function addAnswers (Request $request)
+    function setAnswers (Request $request)
     {
 
     }
@@ -60,13 +66,15 @@ class ConstructorController extends Controller
             'test-name' => 'required|alpha_num',
             'test-cription' => 'alpha_num'
         ]);
+        session('test')->setName($validatedtest['test-name']);
+        session('test')->setDescription($validatedtest['test-cription']);
         $client = new Client([
             'base_uri' => 'localhost:8081',
             'headers' => ['Content-Type' => 'application/json'],
             'debug'=>fopen($_SERVER['DOCUMENT_ROOT']."/regrequest.log", "a")
         ]);
         $request = new Psr7\Request('POST', '/checkreg',
-            ['body' => json_encode(session('test'))]);
+            ['teacher_id'=>session('userID'),'body' => json_encode(session('test'))]);
         try {
             $response = $client->send($request);
             echo "Лог запроса:<br><br>";
@@ -77,7 +85,8 @@ class ConstructorController extends Controller
             echo $response->getStatusCode() . "<br>";
             $trueresp = json_decode($response->getBody(), true);
             if ($trueresp['status'] == "OK") {
-                return redirect()->route('HomeRoute');
+                session()->push('actual_tests',session()->pull('test'));
+                return redirect()->route('LKRoute');
             } else {
                 return back()->withInput();
             }

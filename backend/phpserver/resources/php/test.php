@@ -4,6 +4,23 @@ class SomeTest
     private $name = "Добавьте название";
     private $authorID;
     private $questions = [];
+    private $description;
+
+    /**
+     * @return mixed
+     */
+    public function getDescription()
+    {
+        return $this->description;
+    }
+
+    /**
+     * @param mixed $description
+     */
+    public function setDescription($description): void
+    {
+        $this->description = $description;
+    }
 
     public function __construct(){}
 
@@ -70,6 +87,13 @@ class SomeTest
     public function setQuestions(array $questions): void
     {
         $this->questions = $questions;
+    }
+
+    public function setQuestion(string $oldquestionname, string $newquestionname, $quality): void
+    {
+        unset($this->questions[$oldquestionname]);
+        $this->questions[$newquestionname]->setQuality($quality);
+        $this->questions[$newquestionname]->setName($newquestionname);
     }
 
     public function addQuestion(string $questionname, $quality):void

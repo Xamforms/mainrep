@@ -24,7 +24,7 @@ Route::get('/registration/render/{rendertype}', function ($rendertype) {
 
 Route::get('/home', 'Studtest\HomeController@showhome')->name('HomeRoute');
 
-Route::get('/lk', 'Studtest\LKController@chooselk');
+Route::get('/lk', 'Studtest\LKController@chooselk')->name('LKRoute');
 
 Route::get('/login', function (){return redirect('/home');});
 
